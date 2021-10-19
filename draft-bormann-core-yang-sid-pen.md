@@ -8,8 +8,8 @@ abbrev: SID ranges for PEN holders
 area: Applications and Real-Time Area (art)
 wg: Internet Engineering Task Force
 kw: CBOR
-cat: std
-consensus: true
+cat: info
+# consensus: true
 pi:
   strict: 'yes'
   toc: 'yes'
