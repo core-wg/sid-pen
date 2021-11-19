@@ -31,6 +31,8 @@ author:
 normative:
   I-D.ietf-core-yang-cbor: yang-cbor
   I-D.ietf-core-sid: core-sid
+informative:
+  RFC1065:
 
 --- abstract
 
@@ -71,6 +73,29 @@ This confers control over the SID range
 303 081 000 000 up to
 303 081 099 999 to this department.
 
+# Discussion
+
+This allocation provides an extremely-low-threshold way for PEN holders
+to get number space for the YANG SIDs used in their YANG modules.
+It is, however, not always the approach to recommend to a module author:
+
+* The space uses 64-bit numbers.  While this is of relatively little
+  consequence due to the delta-encoding used for SIDs in YANG-CBOR, a
+  few further bytes can be saved by allocating the SIDs in one of the
+  mega-ranges that are specifically allocated by an organization
+  (which, for the first 2000 or so, will lead to 32-bit outer deltas).
+* This space has no infrastructure to discover the YANG module behind
+  a SID.  Of course, each PEN holder can provide such infrastructure,
+  but even then the problem remains how to find that infrastructure
+  for a SID.  (Search engines may mitigate this somewhat.)
+  On the other hand, relative obscurity may be exactly what a PEN
+  holder wants to achieve by using this mechanism.
+
+Relying on the PEN registry might theoretically trigger a land-grab by
+prospective writers of YANG modules.  However, PENs have been around
+for decades {{RFC1065}} and such a land-grab hasn't occurred for the other
+allocations implicitly provided by obtaining a PEN.
+
 # IANA Considerations
 
 This document allocates 100 000 SID mega-ranges as per {{Section 7.4 of
@@ -99,4 +124,4 @@ the PEN number registry.
 {: numbered="false"}
 
 This document was inspired by the discussion of the authors if
-{{-yang-cbor}} and {{-core-sid}} how to handle {{{Rob Wilton's}}}
+{{-yang-cbor}} and {{-core-sid}} how to handle {{{Rob Wilton's}}} feedback.
