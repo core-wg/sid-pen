@@ -7,7 +7,7 @@ title: >
 abbrev: SID ranges for PEN holders
 area: Applications and Real-Time Area (art)
 wg: Internet Engineering Task Force
-kw: CBOR
+kw: YANG-CBOR
 cat: info
 # consensus: true
 pi:
@@ -28,6 +28,11 @@ author:
   phone: "+49-421-218-63921"
   email: cabo@tzi.org
 
+venue:
+  group: CoRE
+  mail: core@ietf.org
+  github: cabo/sid-pen
+
 normative:
   I-D.ietf-core-yang-cbor: yang-cbor
   I-D.ietf-core-sid: core-sid
@@ -47,7 +52,7 @@ informative:
 [^abs2-]
 
 [^abs2-]: The present specification uses these SID allocation mechanisms
-        to allocate 100 000 SIDs for each holder of the first 1 000 000
+        to allocate 100 000 SIDs for each of the first 1 000 000
         holders of IANA-registered Private Enterprise Numbers (PENs).
 
 --- middle
@@ -58,11 +63,11 @@ informative:
 
 [^abs2-]
 
-We allocate 100 000 mega-ranges, for the SID numbers
-300 000 000 000 to 399 999 999 999.
+We allocate 100 000 mega-ranges, for the SID numbers
+300 000 000 000 to 399 999 999 999.
 
-The holder of a PEN ppp ppp then can use the SID numbers
-3pp ppp p00 000 to 3pp ppp p99 999 for allocation in a scheme defined
+The holder of a PEN ppp ppp then can use the SID numbers
+3pp ppp p00 000 to 3pp ppp p99 999 for allocation in a scheme defined
 by the holder.
 
 # Example
@@ -70,8 +75,8 @@ by the holder.
 The Department for Mathematics and Computer Science of {{{Universität Bremen}}} holds PEN 30810.
 
 This confers control over the SID range
-303 081 000 000 up to
-303 081 099 999 to this department.
+303 081 000 000 up to
+303 081 099 999 to this PEN holder.
 
 # Discussion
 
@@ -108,10 +113,11 @@ The contact for the allocation is: IETF CORE Working Group
 The allocation policy inside the mega-range is "private".
 The URL is that of the present specification.
 
-The management of the SID blocks of 100 000 SIDs each, 10 such blocks
-for each mega-range 3nn nnn 000 000, is delegated to the PEN holder
-for nnn nnx, where x is the sequence number of the SID block in the
-mega-range.
+The management of the SID blocks of 100 000 SIDs each, 10 such blocks
+for each mega-range 3nn nnn 000 000, is delegated to the PEN holder
+for nnn nnx, where x is the sequence number of the SID block in the
+mega-range (i.e., the PEN holder for nnn nnx controls SID
+3nn nnn x00 000 to 3nn nnn x99 999).
 
 The technical capacity to ensure the sustained operation of the
 registry for a period of at least 10 years (as required for registries
@@ -123,5 +129,5 @@ the PEN number registry.
 # Acknowledgments
 {: numbered="false"}
 
-This document was inspired by the discussion of the authors if
+This document was inspired by the discussion of the authors of
 {{-yang-cbor}} and {{-core-sid}} how to handle {{{Rob Wilton's}}} feedback.
