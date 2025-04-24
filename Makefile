@@ -1,3 +1,5 @@
+TEXT_PAGINATION := true
+
 LIBDIR := lib
 include $(LIBDIR)/main.mk
 

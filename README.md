@@ -2,16 +2,17 @@
 
 This is the working area for the IETF [CORE Working Group](https://datatracker.ietf.org/group/core/documents/) Internet-Draft, "YANG-CBOR: Allocating SID ranges for PEN holders".
 
-* [Editor's Copy](https://cabo.github.io/sid-pen/#go.draft-ietf-core-yang-sid-pen.html)
+* [Editor's Copy](https://core-wg.github.io/sid-pen/#go.draft-ietf-core-yang-sid-pen.html)
 * [Datatracker Page](https://datatracker.ietf.org/doc/draft-ietf-core-yang-sid-pen)
 * [Working Group Draft](https://datatracker.ietf.org/doc/html/draft-ietf-core-yang-sid-pen)
-* [Compare Editor's Copy to Working Group Draft](https://cabo.github.io/sid-pen/#go.draft-ietf-core-yang-sid-pen.diff)
+* [Compare Editor's Copy to Working Group Draft](https://core-wg.github.io/sid-pen/#go.draft-ietf-core-yang-sid-pen.diff)
 
+[Access to all branches](https://core-wg.github.io/sid-pen/)
 
 ## Contributing
 
 See the
-[guidelines for contributions](https://github.com/cabo/sid-pen/blob/main/CONTRIBUTING.md).
+[guidelines for contributions](https://github.com/core-wg/sid-pen/blob/main/CONTRIBUTING.md).
 
 Contributions can be made by creating pull requests.
 The GitHub interface supports creating pull requests using the Edit (✏) button.
