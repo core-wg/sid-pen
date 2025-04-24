@@ -1,7 +1,7 @@
 ---
 v: 3
 
-docname: draft-bormann-core-yang-sid-pen-latest
+docname: draft-ietf-core-yang-sid-pen-latest
 title: >
   YANG-CBOR: Allocating SID ranges for PEN holders
 abbrev: SID ranges for PEN holders
@@ -32,7 +32,7 @@ author:
 venue:
   group: CoRE
   mail: core@ietf.org
-  github: cabo/sid-pen
+  github: core-wg/sid-pen
 
 normative:
   RFC9254: yang-cbor
