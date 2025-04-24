@@ -49,6 +49,15 @@ Status of This Memo
    working documents as Internet-Drafts.  The list of current Internet-
    Drafts is at https://datatracker.ietf.org/drafts/current/.
 
+
+
+
+
+Bormann                  Expires 26 October 2025                [Page 1]
+
+Internet-Draft         SID ranges for PEN holders             April 2025
+
+
    Internet-Drafts are draft documents valid for a maximum of six months
    and may be updated, replaced, or obsoleted by other documents at any
    time.  It is inappropriate to use Internet-Drafts as reference
@@ -72,15 +81,15 @@ Copyright Notice
 
 Table of Contents
 
-   1.  Introduction
-   2.  Example
-   3.  Discussion
-   4.  IANA Considerations
-   5.  References
-     5.1.  Normative References
-     5.2.  Informative References
-   Acknowledgments
-   Author's Address
+   1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
+   2.  Example . . . . . . . . . . . . . . . . . . . . . . . . . . .   3
+   3.  Discussion  . . . . . . . . . . . . . . . . . . . . . . . . .   3
+   4.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   4
+   5.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   4
+     5.1.  Normative References  . . . . . . . . . . . . . . . . . .   4
+     5.2.  Informative References  . . . . . . . . . . . . . . . . .   5
+   Acknowledgments . . . . . . . . . . . . . . . . . . . . . . . . .   5
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   5
 
 1.  Introduction
 
@@ -97,6 +106,13 @@ Table of Contents
 
    IANA [is requested to allocate/has allocated] 100 000 mega-ranges,
    for the SID numbers 300 000 000 000 to 399 999 999 999.
+
+
+
+Bormann                  Expires 26 October 2025                [Page 2]
+
+Internet-Draft         SID ranges for PEN holders             April 2025
+
 
    IANA also [is requested to allocate/has allocated] 1000 mega-ranges,
    for the SID numbers 3 000 000 000 to 3 999 999 999.
@@ -142,6 +158,17 @@ Table of Contents
       infrastructure for a SID.  (Search engines may mitigate this
       somewhat.)  On the other hand, relative obscurity may be exactly
       what a PEN holder wants to achieve by using this mechanism.
+
+
+
+
+
+
+
+Bormann                  Expires 26 October 2025                [Page 3]
+
+Internet-Draft         SID ranges for PEN holders             April 2025
+
 
    Relying on the PEN registry might theoretically trigger a land-grab
    by prospective writers of YANG modules.  However, PENs have been
@@ -192,6 +219,13 @@ Table of Contents
               iDentifier (YANG SID)", RFC 9595, DOI 10.17487/RFC9595,
               July 2024, <https://www.rfc-editor.org/rfc/rfc9595>.
 
+
+
+Bormann                  Expires 26 October 2025                [Page 4]
+
+Internet-Draft         SID ranges for PEN holders             April 2025
+
+
 5.2.  Informative References
 
    [RFC1065]  McCloghrie, K. and M. Rose, "Structure and identification
@@ -213,3 +247,34 @@ Author's Address
    Germany
    Phone: +49-421-218-63921
    Email: cabo@tzi.org
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Bormann                  Expires 26 October 2025                [Page 5]
