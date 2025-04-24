@@ -1,6 +1,8 @@
+<!-- regenerate: on (set to off if you edit this file) -->
+
 # YANG-CBOR: Allocating SID ranges for PEN holders
 
-This is the working area for the IETF [CORE Working Group](https://datatracker.ietf.org/wg/core/documents/) Internet-Draft, "YANG-CBOR: Allocating SID ranges for PEN holders".
+This is the working area for the IETF [CORE Working Group](https://datatracker.ietf.org/group/core/documents/) Internet-Draft, "YANG-CBOR: Allocating SID ranges for PEN holders".
 
 * [Editor's Copy](https://cabo.github.io/sid-pen/#go.draft-ietf-core-yang-sid-pen.html)
 * [Datatracker Page](https://datatracker.ietf.org/doc/draft-ietf-core-yang-sid-pen)
