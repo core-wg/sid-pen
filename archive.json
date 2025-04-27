@@ -1,7 +1,7 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2021-12-19T01:13:00.662228+00:00",
-  "repo": "cabo/sid-pen",
+  "timestamp": "2025-04-27T01:16:22.916063+00:00",
+  "repo": "core-wg/sid-pen",
   "labels": [
     {
       "name": "bug",
@@ -24,14 +24,14 @@
       "color": "a2eeef"
     },
     {
-      "name": "help wanted",
-      "description": "Extra attention is needed",
-      "color": "008672"
-    },
-    {
       "name": "good first issue",
       "description": "Good for newcomers",
       "color": "7057ff"
+    },
+    {
+      "name": "help wanted",
+      "description": "Extra attention is needed",
+      "color": "008672"
     },
     {
       "name": "invalid",
