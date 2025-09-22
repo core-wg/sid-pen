@@ -12,28 +12,28 @@
     unsigned integers used to identify YANG items.
     RFC 9595 defines ways to allocate these SIDs on
     the basis of IANA registries. 
-       The present specification uses these SID allocation
+       The present specification employs these SID allocation
     mechanisms to allocate ranges with 100 000 63-bit SIDs each
     for each of the first 1 000 000 holders of IANA-registered
     Private Enterprise Numbers (PENs), as well as ranges with 10 000 32-bit SIDs each
     for each of the first 100 000 holders. 
     " name="description">
-<meta content="xml2rfc 3.28.1" name="generator">
+<meta content="xml2rfc 3.30.2" name="generator">
 <meta content="YANG-CBOR" name="keyword">
 <meta content="draft-ietf-core-yang-sid-pen-latest" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.28.1
-    Python 3.12.10
+  xml2rfc 3.30.2
+    Python 3.12.11
     ConfigArgParse 1.7
     google-i18n-address 3.1.1
     intervaltree 3.1.0
     Jinja2 3.1.6
-    lxml 5.3.0
-    platformdirs 4.3.7
+    lxml 5.3.1
+    platformdirs 4.4.0
     pycountry 24.6.1
     PyYAML 6.0.2
-    requests 2.32.3
-    setuptools 70.3.0
+    requests 2.32.5
+    setuptools 80.9.0
     wcwidth 0.2.13
 -->
 <link href="draft-ietf-core-yang-sid-pen.xml" rel="alternate" type="application/rfc+xml">
@@ -1053,11 +1053,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">SID ranges for PEN holders</td>
-<td class="right">April 2025</td>
+<td class="right">September 2025</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Bormann</td>
-<td class="center">Expires 26 October 2025</td>
+<td class="center">Expires 26 March 2026</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1070,12 +1070,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-ietf-core-yang-sid-pen-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-04-24" class="published">24 April 2025</time>
+<time datetime="2025-09-22" class="published">22 September 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2025-10-26">26 October 2025</time></dd>
+<dd class="expires"><time datetime="2026-03-26">26 March 2026</time></dd>
 <dt class="label-authors">Author:</dt>
 <dd class="authors">
 <div class="author">
@@ -1093,7 +1093,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
     unsigned integers used to identify YANG items.
     RFC 9595 defines ways to allocate these SIDs on
     the basis of IANA registries.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
-<p id="section-abstract-2">The present specification uses these SID allocation
+<p id="section-abstract-2">The present specification employs these SID allocation
     mechanisms to allocate ranges with 100 000 63-bit SIDs each
     for each of the first 1 000 000 holders of IANA-registered
     Private Enterprise Numbers (PENs), as well as ranges with 10 000 32-bit SIDs each
@@ -1133,7 +1133,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 26 October 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 26 March 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1200,12 +1200,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
       <h2 id="name-introduction">
 <a href="#section-1" class="section-number selfRef">1. </a><a href="#name-introduction" class="section-name selfRef">Introduction</a>
       </h2>
-<p id="section-1-1">YANG-CBOR, <span>[<a href="#RFC9254" class="cite xref">RFC9254</a>]</span> defines
+<p id="section-1-1">YANG-CBOR <span>[<a href="#RFC9254" class="cite xref">RFC9254</a>]</span> defines
     YANG Schema Item iDentifiers (YANG SID), globally unique 63-bit
     unsigned integers used to identify YANG items.
     RFC 9595 defines ways to allocate these SIDs on
     the basis of IANA registries.<a href="#section-1-1" class="pilcrow">¶</a></p>
-<p id="section-1-2">The present specification uses these SID allocation
+<p id="section-1-2">The present specification employs these SID allocation
     mechanisms to allocate ranges with 100 000 63-bit SIDs each
     for each of the first 1 000 000 holders of IANA-registered
     Private Enterprise Numbers (PENs), as well as ranges with 10 000 32-bit SIDs each
@@ -1214,12 +1214,25 @@ svg :is([fill="white"], [fill^="#fff"]) {
 300 000 000 000 to 399 999 999 999.<a href="#section-1-3" class="pilcrow">¶</a></p>
 <p id="section-1-4">IANA also [is requested to allocate/has allocated] 1000 mega-ranges, for the SID numbers
 3 000 000 000 to 3 999 999 999.<a href="#section-1-4" class="pilcrow">¶</a></p>
-<p id="section-1-5">The holder of a PEN ppp ppp then can use the SID numbers
-3pp ppp p00 000 to 3pp ppp p99 999 for allocation in a scheme defined
-by the holder.
-The holder of a PEN pp ppp then can use the SID numbers
-3 ppp pp0 000 to 3 ppp pp9 999 for allocation in a scheme defined
-by the holder.<a href="#section-1-5" class="pilcrow">¶</a></p>
+<p id="section-1-5">Private Enterprise Numbers (PENs) are registered in
+<span>[<a href="#IANA.enterprise-numbers" class="cite xref">IANA.enterprise-numbers</a>]</span> in a low-threshold, low-overhead
+registration process.
+At the time of writing (~ 37 years after
+creating this registry), around 65 000 PENs are registered.
+We speak of the registrant for a PEN as the "PEN holder".<a href="#section-1-5" class="pilcrow">¶</a></p>
+<p id="section-1-6">The present specification makes the following SID ranges available to
+certain (current or future) PEN holders for allocation in a scheme defined
+by the holder:<a href="#section-1-6" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-1-7.1">
+          <p id="section-1-7.1.1">The holder of a PEN ppp ppp (&lt; 1 000 000) can use the SID numbers
+3pp ppp p00 000 to 3pp ppp p99 999.<a href="#section-1-7.1.1" class="pilcrow">¶</a></p>
+</li>
+        <li class="normal" id="section-1-7.2">
+          <p id="section-1-7.2.1">The holder of a PEN pp ppp (&lt; 100 000) can use the SID numbers
+3 ppp pp0 000 to 3 ppp pp9 999.<a href="#section-1-7.2.1" class="pilcrow">¶</a></p>
+</li>
+      </ul>
 </section>
 </div>
 <div id="example">
@@ -1228,13 +1241,19 @@ by the holder.<a href="#section-1-5" class="pilcrow">¶</a></p>
 <a href="#section-2" class="section-number selfRef">2. </a><a href="#name-example" class="section-name selfRef">Example</a>
       </h2>
 <p id="section-2-1">The Department for Mathematics and Computer Science of <span class="contact-name">Universität Bremen</span> holds PEN 30810.<a href="#section-2-1" class="pilcrow">¶</a></p>
-<p id="section-2-2">This confers control over the SID range
-303 081 000 000 up to
-303 081 099 999,
-as well as
-3 308 100 000 up to
-3 308 109 999 up to
-to this PEN holder.<a href="#section-2-2" class="pilcrow">¶</a></p>
+<p id="section-2-2">To this PEN holder, the present specification confers control over the
+SID ranges:<a href="#section-2-2" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-2-3.1">
+          <p id="section-2-3.1.1">3<strong>03 081 0</strong>00 000 up to 3<strong>03 081 0</strong>99 999, and<a href="#section-2-3.1.1" class="pilcrow">¶</a></p>
+</li>
+        <li class="normal" id="section-2-3.2">
+          <p id="section-2-3.2.1">3 <strong>308 10</strong>0 000 up to 3 <strong>308 10</strong>9 999.<a href="#section-2-3.2.1" class="pilcrow">¶</a></p>
+</li>
+      </ul>
+<p id="section-2-4">(The plaintext form of this document shows "*" characters around the
+digits conveying the PEN, which are shown in <strong>boldface</strong> in the
+typographic forms.)<a href="#section-2-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="discussion">
@@ -1242,9 +1261,13 @@ to this PEN holder.<a href="#section-2-2" class="pilcrow">¶</a></p>
       <h2 id="name-discussion">
 <a href="#section-3" class="section-number selfRef">3. </a><a href="#name-discussion" class="section-name selfRef">Discussion</a>
       </h2>
-<p id="section-3-1">This allocation provides an extremely-low-threshold way for PEN holders
-to get number space for the YANG SIDs used in their YANG modules.
-It is, however, not always the approach to recommend to a module author:<a href="#section-3-1" class="pilcrow">¶</a></p>
+<p id="section-3-1">This allocation provides an extremely-low-threshold (zero-interaction)
+way for PEN holders to get number space for the YANG SIDs used in
+their YANG modules.
+If a PEN is not already available to the entity needing such number
+space, it can be obtained in a very low-threshold process.
+Employing this number space is, however, not always the approach to
+recommend to a module author:<a href="#section-3-1" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-3-2.1">
           <p id="section-3-2.1.1">The large space uses 64-bit numbers.  While this is of relatively little
@@ -1266,14 +1289,16 @@ no longer needed.<a href="#section-3-2.2.1" class="pilcrow">¶</a></p>
 a SID.  Of course, each PEN holder can provide such infrastructure,
 but even then the problem remains how to find that infrastructure
 for a SID.  (Search engines may mitigate this somewhat.)
-On the other hand, relative obscurity may be exactly what a PEN
+On the other hand, in some cases this relative obscurity may be exactly what a PEN
 holder wants to achieve by using this mechanism.<a href="#section-3-2.3.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
 <p id="section-3-3">Relying on the PEN registry might theoretically trigger a land-grab by
-prospective writers of YANG modules.  However, PENs have been around
-for decades <span>[<a href="#RFC1065" class="cite xref">RFC1065</a>]</span> and such a land-grab hasn't occurred for the other
-allocations implicitly provided by obtaining a PEN.<a href="#section-3-3" class="pilcrow">¶</a></p>
+prospective writers of YANG modules.
+However, PENs have been around for decades (see <span><a href="https://rfc-editor.org/rfc/rfc1065#section-3.1.4" class="relref">Section 3.1.4</a> of [<a href="#RFC1065" class="cite xref">RFC1065</a>]</span>, which continues to be in force with no technical changes as
+Section <a href="https://rfc-editor.org/rfc/rfc1155#section-3.1.4" class="relref">3.1.4</a> of RFC 1155 <span>[<a href="#STD16" class="cite xref">STD16</a>]</span>), and such a land-grab hasn't
+occurred for the other allocations implicitly provided by obtaining a
+PEN.<a href="#section-3-3" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="iana-considerations">
@@ -1285,7 +1310,7 @@ allocations implicitly provided by obtaining a PEN.<a href="#section-3-3" class=
 as per <span><a href="https://rfc-editor.org/rfc/rfc9595#section-7.4" class="relref">Section 7.4</a> of [<a href="#RFC9595" class="cite xref">RFC9595</a>]</span>.<a href="#section-4-1" class="pilcrow">¶</a></p>
 <p id="section-4-2">The contact for the allocation is: IETF CORE Working Group
       (core@ietf.org) or IETF Applications and Real-Time Area
-      (art@ietf.org)<a href="#section-4-2" class="pilcrow">¶</a></p>
+      (art@ietf.org).<a href="#section-4-2" class="pilcrow">¶</a></p>
 <p id="section-4-3">The allocation policy inside the mega-range is "private".
 The URL is that of the present specification.<a href="#section-4-3" class="pilcrow">¶</a></p>
 <p id="section-4-4">The management of the SID blocks of 100 000 SIDs each, 10 such blocks
@@ -1315,6 +1340,10 @@ the PEN number registry.<a href="#section-4-6" class="pilcrow">¶</a></p>
 <a href="#section-5.1" class="section-number selfRef">5.1. </a><a href="#name-normative-references" class="section-name selfRef">Normative References</a>
         </h3>
 <dl class="references">
+<dt id="IANA.enterprise-numbers">[IANA.enterprise-numbers]</dt>
+        <dd>
+<span class="refTitle">"*** BROKEN REFERENCE ***"</span>. </dd>
+<dd class="break"></dd>
 <dt id="RFC9254">[RFC9254]</dt>
         <dd>
 <span class="refAuthor">Veillette, M., Ed.</span>, <span class="refAuthor">Petrov, I., Ed.</span>, <span class="refAuthor">Pelov, A.</span>, <span class="refAuthor">Bormann, C.</span>, and <span class="refAuthor">M. Richardson</span>, <span class="refTitle">"Encoding of Data Modeled with YANG in the Concise Binary Object Representation (CBOR)"</span>, <span class="seriesInfo">RFC 9254</span>, <span class="seriesInfo">DOI 10.17487/RFC9254</span>, <time datetime="2022-07" class="refDate">July 2022</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9254">https://www.rfc-editor.org/rfc/rfc9254</a>&gt;</span>. </dd>
@@ -1333,8 +1362,18 @@ the PEN number registry.<a href="#section-4-6" class="pilcrow">¶</a></p>
         </h3>
 <dl class="references">
 <dt id="RFC1065">[RFC1065]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">McCloghrie, K.</span> and <span class="refAuthor">M. Rose</span>, <span class="refTitle">"Structure and identification of management information for TCP/IP-based internets"</span>, <span class="seriesInfo">RFC 1065</span>, <span class="seriesInfo">DOI 10.17487/RFC1065</span>, <time datetime="1988-08" class="refDate">August 1988</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc1065">https://www.rfc-editor.org/rfc/rfc1065</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="STD16">[STD16]</dt>
+      <dd>
+<div class="refInstance">Internet Standard 16, <span>&lt;<a href="https://www.rfc-editor.org/info/std16">https://www.rfc-editor.org/info/std16</a>&gt;</span>.<br><span>At the time of writing, this STD comprises the following:</span>
+</div>
+<div class="refInstance" id="RFC1155">
+            <span class="refAuthor">Rose, M.</span> and <span class="refAuthor">K. McCloghrie</span>, <span class="refTitle">"Structure and identification of management information for TCP/IP-based internets"</span>, <span class="seriesInfo">STD 16</span>, <span class="seriesInfo">RFC 1155</span>, <span class="seriesInfo">DOI 10.17487/RFC1155</span>, <time datetime="1990-05" class="refDate">May 1990</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc1155">https://www.rfc-editor.org/info/rfc1155</a>&gt;</span>. </div>
+<div class="refInstance" id="RFC1212">
+            <span class="refAuthor">Rose, M.</span> and <span class="refAuthor">K. McCloghrie</span>, <span class="refTitle">"Concise MIB definitions"</span>, <span class="seriesInfo">STD 16</span>, <span class="seriesInfo">RFC 1212</span>, <span class="seriesInfo">DOI 10.17487/RFC1212</span>, <time datetime="1991-03" class="refDate">March 1991</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc1212">https://www.rfc-editor.org/info/rfc1212</a>&gt;</span>. </div>
+</dd>
 <dd class="break"></dd>
 </dl>
 </section>
