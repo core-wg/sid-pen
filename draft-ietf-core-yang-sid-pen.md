@@ -37,8 +37,10 @@ venue:
 normative:
   RFC9254: yang-cbor
   RFC9595: core-sid
+  IANA.enterprise-numbers: iana-pen
 informative:
   RFC1065:
+  STD16: # RFC 1155, Section 3.1.4
 
 --- abstract
 
@@ -52,7 +54,7 @@ YANG-CBOR, RFC 9254 [^abs1-]
 
 [^abs2-]
 
-[^abs2-]: The present specification uses these SID allocation
+[^abs2-]: The present specification employs these SID allocation
         mechanisms to allocate ranges with 100 000 63-bit SIDs each
         for each of the first 1 000 000 holders of IANA-registered
         Private Enterprise Numbers (PENs), as well as ranges with 10 000 32-bit SIDs each
@@ -62,7 +64,7 @@ YANG-CBOR, RFC 9254 [^abs1-]
 
 # Introduction
 
-YANG-CBOR, {{-yang-cbor}} [^abs1-]
+YANG-CBOR {{-yang-cbor}} [^abs1-]
 
 [^abs2-]
 
@@ -72,30 +74,45 @@ IANA \[is requested to allocate/has allocated] 100 000 mega-ranges, for the SID
 IANA also \[is requested to allocate/has allocated] 1000 mega-ranges, for the SID numbers
 3 000 000 000 to 3 999 999 999.
 
-The holder of a PEN ppp ppp then can use the SID numbers
-3pp ppp p00 000 to 3pp ppp p99 999 for allocation in a scheme defined
-by the holder.
-The holder of a PEN pp ppp then can use the SID numbers
-3 ppp pp0 000 to 3 ppp pp9 999 for allocation in a scheme defined
-by the holder.
+Private Enterprise Numbers (PENs) are registered in
+{{IANA.enterprise-numbers}} in a low-threshold, low-overhead
+registration process.
+At the time of writing (~ 37 years after
+creating this registry), around 65 000 PENs are registered.
+We speak of the registrant for a PEN as the "PEN holder".
+
+The present specification makes the following SID ranges available to
+certain (current or future) PEN holders for allocation in a scheme defined
+by the holder:
+
+* The holder of a PEN ppp ppp (< 1 000 000) can use the SID numbers
+3pp ppp p00 000 to 3pp ppp p99 999.
+* The holder of a PEN pp ppp (< 100 000) can use the SID numbers
+3 ppp pp0 000 to 3 ppp pp9 999.
 
 # Example
 
 The Department for Mathematics and Computer Science of {{{Universität Bremen}}} holds PEN 30810.
 
-This confers control over the SID range
-303 081 000 000 up to
-303 081 099 999,
-as well as
-3 308 100 000 up to
-3 308 109 999 up to
-to this PEN holder.
+To this PEN holder, the present specification confers control over the
+SID ranges:
+
+* 3**03 081 0**00 000 up to 3**03 081 0**99 999, and
+* 3 **308 10**0 000 up to 3 **308 10**9 999.
+
+(The plaintext form of this document shows "*" characters around the
+digits conveying the PEN, which are shown in **boldface** in the
+typographic forms.)
 
 # Discussion
 
-This allocation provides an extremely-low-threshold way for PEN holders
-to get number space for the YANG SIDs used in their YANG modules.
-It is, however, not always the approach to recommend to a module author:
+This allocation provides an extremely-low-threshold (zero-interaction)
+way for PEN holders to get number space for the YANG SIDs used in
+their YANG modules.
+If a PEN is not already available to the entity needing such number
+space, it can be obtained in a very low-threshold process.
+Employing this number space is, however, not always the approach to
+recommend to a module author:
 
 * The large space uses 64-bit numbers.  While this is of relatively little
   consequence due to the delta-encoding used for SIDs in YANG-CBOR, a
@@ -112,13 +129,16 @@ It is, however, not always the approach to recommend to a module author:
   a SID.  Of course, each PEN holder can provide such infrastructure,
   but even then the problem remains how to find that infrastructure
   for a SID.  (Search engines may mitigate this somewhat.)
-  On the other hand, relative obscurity may be exactly what a PEN
+  On the other hand, in some cases this relative obscurity may be exactly what a PEN
   holder wants to achieve by using this mechanism.
 
 Relying on the PEN registry might theoretically trigger a land-grab by
-prospective writers of YANG modules.  However, PENs have been around
-for decades {{RFC1065}} and such a land-grab hasn't occurred for the other
-allocations implicitly provided by obtaining a PEN.
+prospective writers of YANG modules.
+However, PENs have been around for decades (see {{Section 3.1.4 of
+RFC1065}}, which continues to be in force with no technical changes as
+{{Section 3.1.4 of RFC1155@STD16}}), and such a land-grab hasn't
+occurred for the other allocations implicitly provided by obtaining a
+PEN.
 
 # IANA Considerations
 
@@ -127,7 +147,7 @@ as per {{Section 7.4 of -core-sid}}.
 
 The contact for the allocation is: IETF CORE Working Group
       (core@ietf.org) or IETF Applications and Real-Time Area
-      (art@ietf.org)
+      (art@ietf.org).
 
 The allocation policy inside the mega-range is "private".
 The URL is that of the present specification.
