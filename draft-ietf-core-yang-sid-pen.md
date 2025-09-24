@@ -41,6 +41,8 @@ normative:
 informative:
   RFC1065:
   STD16: # RFC 1155, Section 3.1.4
+  I-D.ietf-core-yang-library: core-yang-library
+  RFC8525: yang-library
 
 --- abstract
 
@@ -131,6 +133,18 @@ recommend to a module author:
   for a SID.  (Search engines may mitigate this somewhat.)
   On the other hand, in some cases this relative obscurity may be exactly what a PEN
   holder wants to achieve by using this mechanism.
+
+  If obscurity is not the intention, one or both of the following
+  approaches are encouraged:
+
+   * The PEN holder can provide a public repository where their YANG
+     models can be found alongside the applicable SID files.
+     Such a repository may be easy to set up using a popular git forge
+     such as, at the time of writing, GitHub.
+
+   * Implementations that employ PEN-based SIDs can facilitate
+     information discovery by providing {{-core-yang-library}} or
+     another form of YANG library {{-yang-library}}.
 
 Relying on the PEN registry might theoretically trigger a land-grab by
 prospective writers of YANG modules.
