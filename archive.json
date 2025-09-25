@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-09-23T01:08:29.192693+00:00",
+  "timestamp": "2025-09-25T01:09:55.337141+00:00",
   "repo": "core-wg/sid-pen",
   "labels": [
     {
@@ -50,5 +50,61 @@
     }
   ],
   "issues": [],
-  "pulls": []
+  "pulls": [
+    {
+      "number": 1,
+      "id": "PR_kwDOGPqYRM6qUYcd",
+      "title": "-02: Add modeler/implementer nudging from May 2025 discussion",
+      "url": "https://github.com/core-wg/sid-pen/pull/1",
+      "state": "OPEN",
+      "author": "cabo",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-09-24T15:46:55Z",
+      "updatedAt": "2025-09-24T21:54:01Z",
+      "baseRepository": "core-wg/sid-pen",
+      "baseRefName": "main",
+      "baseRefOid": "79d252e986894ebc23026d4e721da3f4bd01b456",
+      "headRepository": "core-wg/sid-pen",
+      "headRefName": "nudging",
+      "headRefOid": "f4a88f8bca07ccb3924a949712ce95044c1b684d",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "EskoDijk",
+          "authorAssociation": "NONE",
+          "body": "The \"library\" aspect is not fully explained, I think. The referenced docs mention a server or a device can present its supported YANG modules.\r\n\r\nDo we mean in this context here, that a vendor can use a YANG library for a different purpose i.e. to show what YANG modules the vendor has defined in its private PEN space? (So: not what a single device would support.)\r\nIf so, we may be explicit about this?",
+          "createdAt": "2025-09-24T16:20:39Z",
+          "updatedAt": "2025-09-24T16:20:39Z"
+        },
+        {
+          "author": "cabo",
+          "authorAssociation": "MEMBER",
+          "body": "> The \"library\" aspect is not fully explained, I think. The referenced docs mention a server or a device can present its supported YANG modules.\r\n\r\nIndeed, this text assumes that the concept of a YANG library or the CoRECONF specific version of that is known.\r\n\r\n> Do we mean in this context here, that a vendor can use a YANG library for a different purpose i.e. to show what YANG modules the vendor has defined in its private PEN space? (So: not what a single device would support.) If so, we may be explicit about this?\r\n\r\nThat was not the intention -- the intention was to help a client deal with the specific PEN-based SIDs employed by a server.  Only the first bullet addresses finding all models with PEN-based SID files for a PEN holder.\r\n\r\n",
+          "createdAt": "2025-09-24T21:54:01Z",
+          "updatedAt": "2025-09-24T21:54:01Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOGPqYRM7CmV47",
+          "commit": {
+            "abbreviatedOid": "f4a88f8"
+          },
+          "author": "mcr",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-09-24T21:43:17Z",
+          "updatedAt": "2025-09-24T21:43:17Z",
+          "comments": []
+        }
+      ]
+    }
+  ]
 }
