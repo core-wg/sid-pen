@@ -1,0 +1,336 @@
+
+
+
+
+Internet Engineering Task Force                               C. Bormann
+Internet-Draft                                    Universität Bremen TZI
+Intended status: Informational                         25 September 2025
+Expires: 29 March 2026
+
+
+            YANG-CBOR: Allocating SID ranges for PEN holders
+                  draft-ietf-core-yang-sid-pen-latest
+
+Abstract
+
+   YANG-CBOR, RFC 9254 defines YANG Schema Item iDentifiers (YANG SID),
+   globally unique 63-bit unsigned integers used to identify YANG items.
+   RFC 9595 defines ways to allocate these SIDs on the basis of IANA
+   registries.
+
+   The present specification employs these SID allocation mechanisms to
+   allocate ranges with 100 000 63-bit SIDs each for each of the first
+   1 000 000 holders of IANA-registered Private Enterprise Numbers
+   (PENs), as well as ranges with 10 000 32-bit SIDs each for each of
+   the first 100 000 holders.
+
+About This Document
+
+   This note is to be removed before publishing as an RFC.
+
+   Status information for this document may be found at
+   https://datatracker.ietf.org/doc/draft-ietf-core-yang-sid-pen/.
+
+   Discussion of this document takes place on the CoRE Working Group
+   mailing list (mailto:core@ietf.org), which is archived at
+   https://mailarchive.ietf.org/arch/browse/core/.  Subscribe at
+   https://www.ietf.org/mailman/listinfo/core/.
+
+   Source for this draft and an issue tracker can be found at
+   https://github.com/core-wg/sid-pen.
+
+Status of This Memo
+
+   This Internet-Draft is submitted in full conformance with the
+   provisions of BCP 78 and BCP 79.
+
+   Internet-Drafts are working documents of the Internet Engineering
+   Task Force (IETF).  Note that other groups may also distribute
+   working documents as Internet-Drafts.  The list of current Internet-
+   Drafts is at https://datatracker.ietf.org/drafts/current/.
+
+
+
+
+
+Bormann                   Expires 29 March 2026                 [Page 1]
+
+Internet-Draft         SID ranges for PEN holders         September 2025
+
+
+   Internet-Drafts are draft documents valid for a maximum of six months
+   and may be updated, replaced, or obsoleted by other documents at any
+   time.  It is inappropriate to use Internet-Drafts as reference
+   material or to cite them other than as "work in progress."
+
+   This Internet-Draft will expire on 29 March 2026.
+
+Copyright Notice
+
+   Copyright (c) 2025 IETF Trust and the persons identified as the
+   document authors.  All rights reserved.
+
+   This document is subject to BCP 78 and the IETF Trust's Legal
+   Provisions Relating to IETF Documents (https://trustee.ietf.org/
+   license-info) in effect on the date of publication of this document.
+   Please review these documents carefully, as they describe your rights
+   and restrictions with respect to this document.  Code Components
+   extracted from this document must include Revised BSD License text as
+   described in Section 4.e of the Trust Legal Provisions and are
+   provided without warranty as described in the Revised BSD License.
+
+Table of Contents
+
+   1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
+   2.  Example . . . . . . . . . . . . . . . . . . . . . . . . . . .   3
+   3.  Discussion  . . . . . . . . . . . . . . . . . . . . . . . . .   3
+   4.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   4
+   5.  Security Considerations . . . . . . . . . . . . . . . . . . .   5
+   6.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   5
+     6.1.  Normative References  . . . . . . . . . . . . . . . . . .   5
+     6.2.  Informative References  . . . . . . . . . . . . . . . . .   5
+   Acknowledgments . . . . . . . . . . . . . . . . . . . . . . . . .   6
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   6
+
+1.  Introduction
+
+   YANG-CBOR [RFC9254] defines YANG Schema Item iDentifiers (YANG SID),
+   globally unique 63-bit unsigned integers used to identify YANG items.
+   RFC 9595 defines ways to allocate these SIDs on the basis of IANA
+   registries.
+
+   The present specification employs these SID allocation mechanisms to
+   allocate ranges with 100 000 63-bit SIDs each for each of the first
+   1 000 000 holders of IANA-registered Private Enterprise Numbers
+   (PENs), as well as ranges with 10 000 32-bit SIDs each for each of
+   the first 100 000 holders.
+
+
+
+
+
+Bormann                   Expires 29 March 2026                 [Page 2]
+
+Internet-Draft         SID ranges for PEN holders         September 2025
+
+
+   IANA [is requested to allocate/has allocated] 100 000 mega-ranges,
+   for the SID numbers 300 000 000 000 to 399 999 999 999.
+
+   IANA also [is requested to allocate/has allocated] 1000 mega-ranges,
+   for the SID numbers 3 000 000 000 to 3 999 999 999.
+
+   Private Enterprise Numbers (PENs) are registered in
+   [IANA.enterprise-numbers] in a low-threshold, low-overhead
+   registration process.  At the time of writing (~ 37 years after
+   creating this registry), around 65 000 PENs are registered.  We speak
+   of the registrant for a PEN as the "PEN holder".
+
+   The present specification makes the following SID ranges available to
+   certain (current or future) PEN holders for allocation in a scheme
+   defined by the holder:
+
+   *  The holder of a PEN ppp ppp (< 1 000 000) can use the SID numbers
+      3pp ppp p00 000 to 3pp ppp p99 999.
+
+   *  The holder of a PEN pp ppp (< 100 000) can use the SID numbers
+      3 ppp pp0 000 to 3 ppp pp9 999.
+
+2.  Example
+
+   The Department for Mathematics and Computer Science of Universität
+   Bremen holds PEN 30810.
+
+   To this PEN holder, the present specification confers control over
+   the SID ranges:
+
+   *  3*03 081 0*00 000 up to 3*03 081 0*99 999, and
+
+   *  3 *308 10*0 000 up to 3 *308 10*9 999.
+
+   (The plaintext form of this document shows "*" characters around the
+   digits conveying the PEN, which are shown in *boldface* in the
+   typographic forms.)
+
+3.  Discussion
+
+   This allocation provides an extremely-low-threshold (zero-
+   interaction) way for PEN holders to get number space for the YANG
+   SIDs used in their YANG modules.  If a PEN is not already available
+   to the entity needing such number space, it can be obtained in a very
+   low-threshold process.  Employing this number space is, however, not
+   always the approach to recommend to a module author:
+
+
+
+
+
+Bormann                   Expires 29 March 2026                 [Page 3]
+
+Internet-Draft         SID ranges for PEN holders         September 2025
+
+
+   *  The large space uses 64-bit numbers.  While this is of relatively
+      little consequence due to the delta-encoding used for SIDs in
+      YANG-CBOR, a few further bytes can be saved by allocating the SIDs
+      in one of the mega-ranges that are specifically allocated by an
+      organization (which, for the first 2000 or so, will lead to 32-bit
+      outer deltas).
+
+   *  For the first 100 000 PEN holders, there also is a smaller space
+      that uses 32-bit numbers.  This space is likely to run out before
+      or around 2040; the expectation is that by that time there will be
+      enough opportunities to request ranges from a megarange operator
+      that this mechanism is no longer needed.
+
+   *  This space has no infrastructure to discover the YANG module
+      behind a SID.  Of course, each PEN holder can provide such
+      infrastructure, but even then the problem remains how to find that
+      infrastructure for a SID.  (Search engines may mitigate this
+      somewhat.)  On the other hand, in some cases this relative
+      obscurity may be exactly what a PEN holder wants to achieve by
+      using this mechanism.
+
+   Relying on the PEN registry might theoretically trigger a land-grab
+   by prospective writers of YANG modules.  However, PENs have been
+   around for decades (see Section 3.1.4 of [RFC1065], which continues
+   to be in force with no technical changes as Section 3.1.4 of RFC 1155
+   [STD16]), and such a land-grab hasn't occurred for the other
+   allocations implicitly provided by obtaining a PEN.
+
+4.  IANA Considerations
+
+   This document allocates 100 000 63-bit and 1000 32-bit SID mega-
+   ranges as per Section 7.4 of [RFC9595].
+
+   The contact for the allocation is: IETF CORE Working Group
+   (core@ietf.org) or IETF Applications and Real-Time Area
+   (art@ietf.org).
+
+   The allocation policy inside the mega-range is "private".  The URL is
+   that of the present specification.
+
+   The management of the SID blocks of 100 000 SIDs each, 10 such blocks
+   for each mega-range 3nn nnn 000 000, is delegated to the PEN holder
+   for nnn nnx, where x is the sequence number of the SID block in the
+   mega-range (i.e., the PEN holder for nnn nnx controls SID
+   3nn nnn x00 000 to 3nn nnn x99 999).
+
+
+
+
+
+
+Bormann                   Expires 29 March 2026                 [Page 4]
+
+Internet-Draft         SID ranges for PEN holders         September 2025
+
+
+   Similarly, the management of the SID blocks of 10 000 SIDs each, 100
+   such blocks for each mega-range 3 nnn 000 000, is delegated to the
+   PEN holder for nn nxx, where x is the sequence number of the SID
+   block in the mega-range (i.e., the PEN holder for nn nxx controls SID
+   3 nnn xx0 000 to 3 nnn xx9 999).
+
+   The technical capacity to ensure the sustained operation of the
+   registry for a period of at least 10 years (as required for
+   registries of class "private") is derived from the capacity of IANA
+   to maintain the PEN number registry.
+
+5.  Security Considerations
+
+   Section 5 (Security Considerations) of [RFC9595] applies, as well as
+   Section 8 (Security Considerations) of [RFC9254].  In particular, the
+   fact that a certain Private Enterprise Number appears in a SID is not
+   an indicator of provenance, i.e., it does not guarantee that the SID
+   or underlying YANG model actually does originate from the holder of
+   that PEN.  The requirement to ascertain the authoritative source of
+   this information, as discussed in the above security considerations,
+   remains.
+
+6.  References
+
+6.1.  Normative References
+
+   [IANA.enterprise-numbers]
+              "*** BROKEN REFERENCE ***".
+
+   [RFC9254]  Veillette, M., Ed., Petrov, I., Ed., Pelov, A., Bormann,
+              C., and M. Richardson, "Encoding of Data Modeled with YANG
+              in the Concise Binary Object Representation (CBOR)",
+              RFC 9254, DOI 10.17487/RFC9254, July 2022,
+              <https://www.rfc-editor.org/rfc/rfc9254>.
+
+   [RFC9595]  Veillette, M., Ed., Pelov, A., Ed., Petrov, I., Ed.,
+              Bormann, C., and M. Richardson, "YANG Schema Item
+              iDentifier (YANG SID)", RFC 9595, DOI 10.17487/RFC9595,
+              July 2024, <https://www.rfc-editor.org/rfc/rfc9595>.
+
+6.2.  Informative References
+
+   [RFC1065]  McCloghrie, K. and M. Rose, "Structure and identification
+              of management information for TCP/IP-based internets",
+              RFC 1065, DOI 10.17487/RFC1065, August 1988,
+              <https://www.rfc-editor.org/rfc/rfc1065>.
+
+
+
+
+
+Bormann                   Expires 29 March 2026                 [Page 5]
+
+Internet-Draft         SID ranges for PEN holders         September 2025
+
+
+   [STD16]    Internet Standard 16,
+              <https://www.rfc-editor.org/info/std16>.
+              At the time of writing, this STD comprises the following:
+
+              Rose, M. and K. McCloghrie, "Structure and identification
+              of management information for TCP/IP-based internets",
+              STD 16, RFC 1155, DOI 10.17487/RFC1155, May 1990,
+              <https://www.rfc-editor.org/info/rfc1155>.
+
+              Rose, M. and K. McCloghrie, "Concise MIB definitions",
+              STD 16, RFC 1212, DOI 10.17487/RFC1212, March 1991,
+              <https://www.rfc-editor.org/info/rfc1212>.
+
+Acknowledgments
+
+   This document was inspired by the discussion of the authors of
+   [RFC9254] and [RFC9595] how to handle Rob Wilton's feedback.
+
+Author's Address
+
+   Carsten Bormann
+   Universität Bremen TZI
+   Postfach 330440
+   D-28359 Bremen
+   Germany
+   Phone: +49-421-218-63921
+   Email: cabo@tzi.org
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Bormann                   Expires 29 March 2026                 [Page 6]
