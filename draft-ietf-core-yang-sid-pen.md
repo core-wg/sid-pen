@@ -62,6 +62,19 @@ YANG-CBOR, RFC 9254 [^abs1-]
         Private Enterprise Numbers (PENs), as well as ranges with 10 000 32-bit SIDs each
         for each of the first 100 000 holders.
 
+[^status]
+
+[^status]:\\
+    The present revision –02 is intended to be ready for Working-Group
+    last call, after addressing a brief discussion of –01 at the 2025-09-24
+    interim meeting of CoRE WG.
+    \\
+    Note that due to a regression in the `bib.ietf.org` service
+    (<https://github.com/ietf-tools/bibxml-service/issues/489>), the
+    reference [IANA.enterprise-numbers] may come out as "\*\*\* BROKEN
+    REFERENCE \*\*\*" in some CI systems; this will certainly be fixed in
+    the course of further processing.
+
 --- middle
 
 # Introduction
