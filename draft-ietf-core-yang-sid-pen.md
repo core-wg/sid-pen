@@ -169,6 +169,17 @@ registry for a period of at least 10 years (as required for registries
 of class "private") is derived from the capacity of IANA to maintain
 the PEN number registry.
 
+# Security Considerations
+
+{{Section 5 (Security Considerations) of RFC9595}} applies, as well as
+{{Section 8 (Security Considerations) of RFC9254}}.
+In particular, the fact that a certain Private Enterprise Number
+appears in a SID is not an indicator of provenance, i.e., it does not
+guarantee that the SID or underlying YANG model actually does
+originate from the holder of that PEN.
+The requirement to ascertain the authoritative source of this
+information, as discussed in the above security considerations, remains.
+
 --- back
 
 # Acknowledgments
