@@ -88,7 +88,7 @@ Table of Contents
    5.  Security Considerations . . . . . . . . . . . . . . . . . . .   5
    6.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   5
      6.1.  Normative References  . . . . . . . . . . . . . . . . . .   5
-     6.2.  Informative References  . . . . . . . . . . . . . . . . .   5
+     6.2.  Informative References  . . . . . . . . . . . . . . . . .   6
    Acknowledgments . . . . . . . . . . . . . . . . . . . . . . . . .   6
    Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   6
 
@@ -191,6 +191,18 @@ Internet-Draft         SID ranges for PEN holders         September 2025
       obscurity may be exactly what a PEN holder wants to achieve by
       using this mechanism.
 
+      If obscurity is not the intention, one or both of the following
+      approaches are encouraged:
+
+      -  The PEN holder can provide a public repository where their YANG
+         models can be found alongside the applicable SID files.  Such a
+         repository may be easy to set up using a popular git forge such
+         as, at the time of writing, GitHub.
+
+      -  Implementations that employ PEN-based SIDs can facilitate
+         information discovery by providing [I-D.ietf-core-yang-library]
+         or another form of YANG library [RFC8525].
+
    Relying on the PEN registry might theoretically trigger a land-grab
    by prospective writers of YANG modules.  However, PENs have been
    around for decades (see Section 3.1.4 of [RFC1065], which continues
@@ -207,6 +219,13 @@ Internet-Draft         SID ranges for PEN holders         September 2025
    (core@ietf.org) or IETF Applications and Real-Time Area
    (art@ietf.org).
 
+
+
+Bormann                   Expires 30 March 2026                 [Page 4]
+
+Internet-Draft         SID ranges for PEN holders         September 2025
+
+
    The allocation policy inside the mega-range is "private".  The URL is
    that of the present specification.
 
@@ -215,16 +234,6 @@ Internet-Draft         SID ranges for PEN holders         September 2025
    for nnn nnx, where x is the sequence number of the SID block in the
    mega-range (i.e., the PEN holder for nnn nnx controls SID
    3nn nnn x00 000 to 3nn nnn x99 999).
-
-
-
-
-
-
-Bormann                   Expires 30 March 2026                 [Page 4]
-
-Internet-Draft         SID ranges for PEN holders         September 2025
-
 
    Similarly, the management of the SID blocks of 10 000 SIDs each, 100
    such blocks for each mega-range 3 nnn 000 000, is delegated to the
@@ -266,21 +275,31 @@ Internet-Draft         SID ranges for PEN holders         September 2025
               iDentifier (YANG SID)", RFC 9595, DOI 10.17487/RFC9595,
               July 2024, <https://www.rfc-editor.org/rfc/rfc9595>.
 
-6.2.  Informative References
-
-   [RFC1065]  McCloghrie, K. and M. Rose, "Structure and identification
-              of management information for TCP/IP-based internets",
-              RFC 1065, DOI 10.17487/RFC1065, August 1988,
-              <https://www.rfc-editor.org/rfc/rfc1065>.
-
-
-
 
 
 Bormann                   Expires 30 March 2026                 [Page 5]
 
 Internet-Draft         SID ranges for PEN holders         September 2025
 
+
+6.2.  Informative References
+
+   [I-D.ietf-core-yang-library]
+              Veillette, M. and I. Petrov, "Constrained YANG Module
+              Library", Work in Progress, Internet-Draft, draft-ietf-
+              core-yang-library-03, 11 January 2021,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-core-
+              yang-library-03>.
+
+   [RFC1065]  McCloghrie, K. and M. Rose, "Structure and identification
+              of management information for TCP/IP-based internets",
+              RFC 1065, DOI 10.17487/RFC1065, August 1988,
+              <https://www.rfc-editor.org/rfc/rfc1065>.
+
+   [RFC8525]  Bierman, A., Bjorklund, M., Schoenwaelder, J., Watsen, K.,
+              and R. Wilton, "YANG Library", RFC 8525,
+              DOI 10.17487/RFC8525, March 2019,
+              <https://www.rfc-editor.org/rfc/rfc8525>.
 
    [STD16]    Internet Standard 16,
               <https://www.rfc-editor.org/info/std16>.
@@ -309,25 +328,6 @@ Author's Address
    Germany
    Phone: +49-421-218-63921
    Email: cabo@tzi.org
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
