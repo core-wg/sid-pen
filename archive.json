@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-09-25T01:09:55.337141+00:00",
+  "timestamp": "2025-09-28T01:16:30.657920+00:00",
   "repo": "core-wg/sid-pen",
   "labels": [
     {
@@ -56,24 +56,26 @@
       "id": "PR_kwDOGPqYRM6qUYcd",
       "title": "-02: Add modeler/implementer nudging from May 2025 discussion",
       "url": "https://github.com/core-wg/sid-pen/pull/1",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "cabo",
       "authorAssociation": "MEMBER",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2025-09-24T15:46:55Z",
-      "updatedAt": "2025-09-24T21:54:01Z",
+      "updatedAt": "2025-09-26T14:15:40Z",
       "baseRepository": "core-wg/sid-pen",
       "baseRefName": "main",
       "baseRefOid": "79d252e986894ebc23026d4e721da3f4bd01b456",
       "headRepository": "core-wg/sid-pen",
       "headRefName": "nudging",
       "headRefOid": "f4a88f8bca07ccb3924a949712ce95044c1b684d",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-09-26T14:15:39Z",
+      "mergedAt": "2025-09-26T14:15:39Z",
+      "mergedBy": "cabo",
+      "mergeCommit": {
+        "oid": "35b4802b8048aed7f940a2d233f685cdb0c56d5d"
+      },
       "comments": [
         {
           "author": "EskoDijk",
@@ -88,6 +90,13 @@
           "body": "> The \"library\" aspect is not fully explained, I think. The referenced docs mention a server or a device can present its supported YANG modules.\r\n\r\nIndeed, this text assumes that the concept of a YANG library or the CoRECONF specific version of that is known.\r\n\r\n> Do we mean in this context here, that a vendor can use a YANG library for a different purpose i.e. to show what YANG modules the vendor has defined in its private PEN space? (So: not what a single device would support.) If so, we may be explicit about this?\r\n\r\nThat was not the intention -- the intention was to help a client deal with the specific PEN-based SIDs employed by a server.  Only the first bullet addresses finding all models with PEN-based SID files for a PEN holder.\r\n\r\n",
           "createdAt": "2025-09-24T21:54:01Z",
           "updatedAt": "2025-09-24T21:54:01Z"
+        },
+        {
+          "author": "EskoDijk",
+          "authorAssociation": "NONE",
+          "body": "@cabo Ok, thanks. The 2nd bullet does say \"implementations\" which matches well to \"devices\" - so should be clear then it's a YANG-library of a given device, hosted on the device.",
+          "createdAt": "2025-09-25T09:36:07Z",
+          "updatedAt": "2025-09-25T09:36:07Z"
         }
       ],
       "reviews": [
@@ -102,6 +111,48 @@
           "body": "",
           "createdAt": "2025-09-24T21:43:17Z",
           "updatedAt": "2025-09-24T21:43:17Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "id": "PR_kwDOGPqYRM6qiG84",
+      "title": "Security Considerations: Point to RFC 9595 and 9254, explain how...",
+      "url": "https://github.com/core-wg/sid-pen/pull/2",
+      "state": "MERGED",
+      "author": "cabo",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "...PEN-based SIDs might add a detail to that.",
+      "createdAt": "2025-09-25T15:11:26Z",
+      "updatedAt": "2025-09-26T14:12:20Z",
+      "baseRepository": "core-wg/sid-pen",
+      "baseRefName": "main",
+      "baseRefOid": "79d252e986894ebc23026d4e721da3f4bd01b456",
+      "headRepository": "core-wg/sid-pen",
+      "headRefName": "seccons",
+      "headRefOid": "5a276306e9f9e837a5b305eaeda7429d2862f020",
+      "closedAt": "2025-09-26T14:12:20Z",
+      "mergedAt": "2025-09-26T14:12:20Z",
+      "mergedBy": "cabo",
+      "mergeCommit": {
+        "oid": "1658e66a141fcb6ce65c77c540ffc87845064256"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOGPqYRM7C0xlP",
+          "commit": {
+            "abbreviatedOid": "5a27630"
+          },
+          "author": "marco-tiloca-sics",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "Looks good to me!",
+          "createdAt": "2025-09-25T16:32:03Z",
+          "updatedAt": "2025-09-25T16:32:03Z",
           "comments": []
         }
       ]
