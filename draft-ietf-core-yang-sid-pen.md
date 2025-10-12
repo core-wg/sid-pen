@@ -129,7 +129,8 @@ space, it can be obtained in a very low-threshold process.
 Employing this number space is, however, not always the approach to
 recommend to a module author:
 
-* The large space uses 64-bit numbers.  While this is of relatively little
+* The larger of the two spaces uses 64-bit numbers.
+  While this is of relatively little
   consequence due to the delta-encoding used for SIDs in YANG-CBOR, a
   few further bytes can be saved by allocating the SIDs in one of the
   mega-ranges that are specifically allocated by an organization
