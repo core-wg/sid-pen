@@ -130,17 +130,16 @@ Employing this number space is, however, not always the approach to
 recommend to a module author:
 
 * The larger of the two spaces uses 64-bit numbers.
-  While this is of relatively little
-  consequence due to the delta-encoding used for SIDs in YANG-CBOR, a
-  few further bytes can be saved by allocating the SIDs in one of the
-  mega-ranges that are specifically allocated by an organization
-  (which, for the first 2000 or so, will lead to 32-bit outer deltas).
+  The larger representation size of the absolute value of the SID is
+  of comparatively little consequence due to the delta-encoding used for
+  SIDs in YANG-CBOR.
 * For the first 100 000 PEN holders, there also is a smaller space that
   uses 32-bit numbers.
-  This space is likely to run out before or around 2040; the
+  PEN numbers that have access to this space are likely to run out
+  before or around 2040; the
   expectation is that by that time there will be enough opportunities
-  to request ranges from a mega-range operator that this mechanism is
-  no longer needed.
+  to request SID ranges within mega-ranges allocated by other registrants that
+  this mechanism is less needed.
 * This space has no infrastructure to discover the YANG module behind
   a SID.  Of course, each PEN holder can provide such infrastructure,
   but even then the problem remains how to find that infrastructure
