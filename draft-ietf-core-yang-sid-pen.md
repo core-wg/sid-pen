@@ -192,10 +192,16 @@ for nn nxx, where x is the sequence number of the SID block in the
 mega-range (i.e., the PEN holder for nn nxx controls SID
 3 nnn xx0 000 to 3 nnn xx9 999).
 
-The technical capacity to ensure the sustained operation of the
-registry for a period of at least 10 years (as required for registries
-of class "private") is derived from the capacity of IANA to maintain
-the PEN number registry.
+{{Section 6.3.2 of -core-sid}} requires an organization that requests an
+entry in the "YANG-SID Mega-Ranges" registry to ensure the technical
+capacity to manage the SID ranges within those mega-ranges for a
+period of at least 10 years (Private ranges).
+The individual SID ranges within the mega-ranges allocated in this
+document are assigned through the registration of PEN numbers.
+The technical capacity to ensure the sustained operation of the PEN
+number registry is derived from the demonstrated capacity of IANA to
+maintain this registry as well as the importance of a functioning PEN
+number registry in other contexts.
 
 # Security Considerations
 
