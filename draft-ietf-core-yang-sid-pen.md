@@ -138,7 +138,7 @@ recommend to a module author:
   uses 32-bit numbers.
   This space is likely to run out before or around 2040; the
   expectation is that by that time there will be enough opportunities
-  to request ranges from a megarange operator that this mechanism is
+  to request ranges from a mega-range operator that this mechanism is
   no longer needed.
 * This space has no infrastructure to discover the YANG module behind
   a SID.  Of course, each PEN holder can provide such infrastructure,
