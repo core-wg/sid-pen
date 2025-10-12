@@ -46,12 +46,13 @@ informative:
 
 --- abstract
 
-YANG-CBOR, RFC 9254 [^abs1-]
+YANG-CBOR (RFC 9254) [^abs1a-] RFC 9595 [^abs1b-]
 
-[^abs1-]: defines
+[^abs1a-]: defines
         YANG Schema Item iDentifiers (YANG SID), globally unique 63-bit
         unsigned integers used to identify YANG items.
-        RFC 9595 defines ways to allocate these SIDs on
+
+[^abs1b-]: defines ways to allocate these SIDs on
         the basis of IANA registries.
 
 [^abs2-]
@@ -79,7 +80,7 @@ YANG-CBOR, RFC 9254 [^abs1-]
 
 # Introduction
 
-YANG-CBOR {{-yang-cbor}} [^abs1-]
+YANG-CBOR {{-yang-cbor}} [^abs1a-] {{-core-sid}} [^abs1b-]
 
 [^abs2-]
 
@@ -94,7 +95,7 @@ Private Enterprise Numbers (PENs) are registered in
 registration process.
 At the time of writing (~ 37 years after
 creating this registry), around 65 000 PENs are registered.
-We speak of the registrant for a PEN as the "PEN holder".
+In this document, the registrant for a PEN is referred to as the "PEN holder".
 
 The present specification makes the following SID ranges available to
 certain (current or future) PEN holders for allocation in a scheme defined
@@ -142,7 +143,7 @@ recommend to a module author:
   this mechanism is less needed.
 * This space has no infrastructure to discover the YANG module behind
   a SID.  Of course, each PEN holder can provide such infrastructure,
-  but even then the problem remains how to find that infrastructure
+  but even then the problem remains of how to find that infrastructure
   for a SID.  (Search engines may mitigate this somewhat.)
   On the other hand, in some cases this relative obscurity may be exactly what a PEN
   holder wants to achieve by using this mechanism.
@@ -163,7 +164,7 @@ Relying on the PEN registry might theoretically trigger a land-grab by
 prospective writers of YANG modules.
 However, PENs have been around for decades (see {{Section 3.1.4 of
 RFC1065}}, which continues to be in force with no technical changes as
-{{Section 3.1.4 of RFC1155@STD16}}), and such a land-grab hasn't
+{{Section 3.1.4 of RFC1155@STD16}}), and such a land-grab has not
 occurred for the other allocations implicitly provided by obtaining a
 PEN.
 
@@ -219,4 +220,4 @@ information, as discussed in the above security considerations, remains.
 {: numbered="false"}
 
 This document was inspired by the discussion of the authors of
-{{-yang-cbor}} and {{-core-sid}} how to handle {{{Rob Wilton's}}} feedback.
+{{-yang-cbor}} and {{-core-sid}} on how to handle {{{Rob Wilton's}}} feedback.
