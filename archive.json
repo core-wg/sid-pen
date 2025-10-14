@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-10-12T01:13:04.696486+00:00",
+  "timestamp": "2025-10-14T01:09:38.615302+00:00",
   "repo": "core-wg/sid-pen",
   "labels": [
     {
@@ -153,6 +153,59 @@
           "body": "Looks good to me!",
           "createdAt": "2025-09-25T16:32:03Z",
           "updatedAt": "2025-09-25T16:32:03Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "id": "PR_kwDOGPqYRM6tUFkS",
+      "title": "Address WGLC results",
+      "url": "https://github.com/core-wg/sid-pen/pull/3",
+      "state": "OPEN",
+      "author": "cabo",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-10-12T13:41:35Z",
+      "updatedAt": "2025-10-12T17:38:29Z",
+      "baseRepository": "core-wg/sid-pen",
+      "baseRefName": "main",
+      "baseRefOid": "2ba255cb744dcbfa8eddd083401a44c4d5f3e6a9",
+      "headRepository": "core-wg/sid-pen",
+      "headRefName": "wglc-results",
+      "headRefOid": "87a3c7a3f1567e672a1a124f401be4b0e77976e6",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOGPqYRM7GZ7rA",
+          "commit": {
+            "abbreviatedOid": "87a3c7a"
+          },
+          "author": "EskoDijk",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-10-12T14:08:52Z",
+          "updatedAt": "2025-10-12T14:08:52Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOGPqYRM7GcCrq",
+          "commit": {
+            "abbreviatedOid": "87a3c7a"
+          },
+          "author": "marco-tiloca-sics",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-10-12T17:38:29Z",
+          "updatedAt": "2025-10-12T17:38:29Z",
           "comments": []
         }
       ]
