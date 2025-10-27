@@ -25,15 +25,13 @@ Abstract
    the first 100 000 holders.
 
 
-   // The present revision –02 is intended to be ready for Working-
-   // Group last call, after addressing a brief discussion of –01 at the
-   // 2025-09-24 interim meeting of CoRE WG.  Note that due to a
-   // regression in the bib.ietf.org service (https://github.com/ietf-
-   // tools/bibxml-service/issues/489 (https://github.com/ietf-tools/
-   // bibxml-service/issues/489)), the reference
-   // [IANA.enterprise-numbers] may come out as "*** BROKEN REFERENCE
-   // ***" in some CI systems; this will certainly be fixed in the
-   // course of further processing.
+   // The present revision –03 is intended to address the feedback from
+   // the CoRE Working-Group last call.  Note that due to a regression
+   // in the bib.ietf.org service (https://github.com/ietf-tools/bibxml-
+   // service/issues/489 (https://github.com/ietf-tools/bibxml-service/
+   // issues/489)), the reference [IANA.enterprise-numbers] may come out
+   // as "*** BROKEN REFERENCE ***" in some CI systems; this will
+   // certainly be fixed in the course of further processing.
 
 About This Document
 
@@ -49,6 +47,8 @@ About This Document
 
    Source for this draft and an issue tracker can be found at
    https://github.com/core-wg/sid-pen.
+
+
 
 
 
