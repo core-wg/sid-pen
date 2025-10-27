@@ -6,7 +6,7 @@ title: >
   YANG-CBOR: Allocating SID ranges for PEN holders
 abbrev: SID ranges for PEN holders
 area: Applications and Real-Time Area (art)
-wg: Internet Engineering Task Force
+wg: CoRE Working Group
 kw: YANG-CBOR
 cat: info
 stream: IETF
@@ -180,7 +180,7 @@ PEN.
 # IANA Considerations
 
 This document allocates 100 000 63-bit and 1000 32-bit SID mega-ranges
-as per {{Section 7.4 of -core-sid}}.
+as per {{Section 6.3 of -core-sid}}.
 
 The contact for the allocation is: IETF CORE Working Group
       (core@ietf.org) or IETF Applications and Real-Time Area
