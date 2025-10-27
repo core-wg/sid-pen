@@ -46,12 +46,13 @@ informative:
 
 --- abstract
 
-YANG-CBOR, RFC 9254 [^abs1-]
+YANG-CBOR (RFC 9254) [^abs1a-] RFC 9595 [^abs1b-]
 
-[^abs1-]: defines
+[^abs1a-]: defines
         YANG Schema Item iDentifiers (YANG SID), globally unique 63-bit
         unsigned integers used to identify YANG items.
-        RFC 9595 defines ways to allocate these SIDs on
+
+[^abs1b-]: defines ways to allocate these SIDs on
         the basis of IANA registries.
 
 [^abs2-]
@@ -79,7 +80,7 @@ YANG-CBOR, RFC 9254 [^abs1-]
 
 # Introduction
 
-YANG-CBOR {{-yang-cbor}} [^abs1-]
+YANG-CBOR {{-yang-cbor}} [^abs1a-] {{-core-sid}} [^abs1b-]
 
 [^abs2-]
 
@@ -94,7 +95,7 @@ Private Enterprise Numbers (PENs) are registered in
 registration process.
 At the time of writing (~ 37 years after
 creating this registry), around 65 000 PENs are registered.
-We speak of the registrant for a PEN as the "PEN holder".
+In this document, the registrant for a PEN is referred to as the "PEN holder".
 
 The present specification makes the following SID ranges available to
 certain (current or future) PEN holders for allocation in a scheme defined
@@ -129,20 +130,20 @@ space, it can be obtained in a very low-threshold process.
 Employing this number space is, however, not always the approach to
 recommend to a module author:
 
-* The large space uses 64-bit numbers.  While this is of relatively little
-  consequence due to the delta-encoding used for SIDs in YANG-CBOR, a
-  few further bytes can be saved by allocating the SIDs in one of the
-  mega-ranges that are specifically allocated by an organization
-  (which, for the first 2000 or so, will lead to 32-bit outer deltas).
+* The larger of the two spaces uses 64-bit numbers.
+  The larger representation size of the absolute value of the SID is
+  of comparatively little consequence due to the delta-encoding used for
+  SIDs in YANG-CBOR.
 * For the first 100 000 PEN holders, there also is a smaller space that
   uses 32-bit numbers.
-  This space is likely to run out before or around 2040; the
+  PEN numbers that have access to this space are likely to run out
+  before or around 2040; the
   expectation is that by that time there will be enough opportunities
-  to request ranges from a megarange operator that this mechanism is
-  no longer needed.
+  to request SID ranges within mega-ranges allocated by other registrants that
+  this mechanism is less needed.
 * This space has no infrastructure to discover the YANG module behind
   a SID.  Of course, each PEN holder can provide such infrastructure,
-  but even then the problem remains how to find that infrastructure
+  but even then the problem remains of how to find that infrastructure
   for a SID.  (Search engines may mitigate this somewhat.)
   On the other hand, in some cases this relative obscurity may be exactly what a PEN
   holder wants to achieve by using this mechanism.
@@ -163,7 +164,7 @@ Relying on the PEN registry might theoretically trigger a land-grab by
 prospective writers of YANG modules.
 However, PENs have been around for decades (see {{Section 3.1.4 of
 RFC1065}}, which continues to be in force with no technical changes as
-{{Section 3.1.4 of RFC1155@STD16}}), and such a land-grab hasn't
+{{Section 3.1.4 of RFC1155@STD16}}), and such a land-grab has not
 occurred for the other allocations implicitly provided by obtaining a
 PEN.
 
@@ -191,10 +192,16 @@ for nn nxx, where x is the sequence number of the SID block in the
 mega-range (i.e., the PEN holder for nn nxx controls SID
 3 nnn xx0 000 to 3 nnn xx9 999).
 
-The technical capacity to ensure the sustained operation of the
-registry for a period of at least 10 years (as required for registries
-of class "private") is derived from the capacity of IANA to maintain
-the PEN number registry.
+{{Section 6.3.2 of -core-sid}} requires an organization that requests an
+entry in the "YANG-SID Mega-Ranges" registry to ensure the technical
+capacity to manage the SID ranges within those mega-ranges for a
+period of at least 10 years (Private ranges).
+The individual SID ranges within the mega-ranges allocated in this
+document are assigned through the registration of PEN numbers.
+The technical capacity to ensure the sustained operation of the PEN
+number registry is derived from the demonstrated capacity of IANA to
+maintain this registry as well as the importance of a functioning PEN
+number registry in other contexts.
 
 # Security Considerations
 
@@ -213,4 +220,4 @@ information, as discussed in the above security considerations, remains.
 {: numbered="false"}
 
 This document was inspired by the discussion of the authors of
-{{-yang-cbor}} and {{-core-sid}} how to handle {{{Rob Wilton's}}} feedback.
+{{-yang-cbor}} and {{-core-sid}} on how to handle {{{Rob Wilton's}}} feedback.
