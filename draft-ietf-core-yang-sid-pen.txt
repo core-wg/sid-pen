@@ -2,7 +2,7 @@
 
 
 
-Internet Engineering Task Force                               C. Bormann
+CoRE Working Group                                            C. Bormann
 Internet-Draft                                    Universität Bremen TZI
 Intended status: Informational                           27 October 2025
 Expires: 30 April 2026
@@ -233,7 +233,7 @@ Internet-Draft         SID ranges for PEN holders           October 2025
 4.  IANA Considerations
 
    This document allocates 100 000 63-bit and 1000 32-bit SID mega-
-   ranges as per Section 7.4 of [RFC9595].
+   ranges as per Section 6.3 of [RFC9595].
 
    The contact for the allocation is: IETF CORE Working Group
    (core@ietf.org) or IETF Applications and Real-Time Area
