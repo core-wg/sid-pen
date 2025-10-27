@@ -38,6 +38,16 @@ normative:
   RFC9254: yang-cbor
   RFC9595: core-sid
   IANA.enterprise-numbers: iana-pen
+# Reference information as cached on the author's laptop, in case we
+# don't get https://github.com/ietf-tools/bibxml-service/issues/489 fixed:
+#  IANA.enterprise-numbers:
+#    -: iana-pen
+#    target: http://www.iana.org/assignments/enterprise-numbers
+#    title: Enterprise Numbers
+#    author:
+#    - org: IANA
+#    date: false
+
 informative:
   RFC1065:
   STD16: # RFC 1155, Section 3.1.4
@@ -66,9 +76,8 @@ YANG-CBOR (RFC 9254) [^abs1a-] RFC 9595 [^abs1b-]
 [^status]
 
 [^status]:\\
-    The present revision –02 is intended to be ready for Working-Group
-    last call, after addressing a brief discussion of –01 at the 2025-09-24
-    interim meeting of CoRE WG.
+    The present revision –03 is intended to address the feedback from
+    the CoRE Working-Group last call.
     \\
     Note that due to a regression in the `bib.ietf.org` service
     (<https://github.com/ietf-tools/bibxml-service/issues/489>), the
