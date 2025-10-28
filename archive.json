@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-10-26T01:17:04.540542+00:00",
+  "timestamp": "2025-10-28T01:11:18.370576+00:00",
   "repo": "core-wg/sid-pen",
   "labels": [
     {
@@ -162,24 +162,26 @@
       "id": "PR_kwDOGPqYRM6tUFkS",
       "title": "Address WGLC results",
       "url": "https://github.com/core-wg/sid-pen/pull/3",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "cabo",
       "authorAssociation": "MEMBER",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2025-10-12T13:41:35Z",
-      "updatedAt": "2025-10-12T17:38:29Z",
+      "updatedAt": "2025-10-27T14:11:01Z",
       "baseRepository": "core-wg/sid-pen",
       "baseRefName": "main",
       "baseRefOid": "2ba255cb744dcbfa8eddd083401a44c4d5f3e6a9",
       "headRepository": "core-wg/sid-pen",
       "headRefName": "wglc-results",
       "headRefOid": "87a3c7a3f1567e672a1a124f401be4b0e77976e6",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-10-27T14:11:01Z",
+      "mergedAt": "2025-10-27T14:11:01Z",
+      "mergedBy": "cabo",
+      "mergeCommit": {
+        "oid": "5cd07ff925279a6e6e73fb4224720953f8ff4c3f"
+      },
       "comments": [],
       "reviews": [
         {
