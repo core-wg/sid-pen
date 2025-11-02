@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-10-30T01:15:43.210851+00:00",
+  "timestamp": "2025-11-02T01:18:11.328567+00:00",
   "repo": "core-wg/sid-pen",
   "labels": [
     {
@@ -211,6 +211,32 @@
           "comments": []
         }
       ]
+    },
+    {
+      "number": 4,
+      "id": "PR_kwDOGPqYRM6w_svl",
+      "title": "Address IANA #1435700 (Comment for IETF 124)",
+      "url": "https://github.com/core-wg/sid-pen/pull/4",
+      "state": "OPEN",
+      "author": "cabo",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "Responding to IANA #1435700, this provides a table of the mega-range allocations for use by IANA.",
+      "createdAt": "2025-11-01T16:09:54Z",
+      "updatedAt": "2025-11-01T16:09:54Z",
+      "baseRepository": "core-wg/sid-pen",
+      "baseRefName": "main",
+      "baseRefOid": "965a4b35e7f4303048fa03215f778575c147097a",
+      "headRepository": "core-wg/sid-pen",
+      "headRefName": "iana-124-comment",
+      "headRefOid": "fbdc29df98644d01713f0feb170a5f099e0de647",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
     }
   ]
 }
