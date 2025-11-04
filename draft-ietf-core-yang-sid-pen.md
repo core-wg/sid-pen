@@ -179,12 +179,23 @@ PEN.
 
 # IANA Considerations
 
-This document allocates 100 000 63-bit and 1000 32-bit SID mega-ranges
-as per {{Section 6.3 of -core-sid}}.
+[^replace-xxxx]: RFC Ed.: throughout this section, please replace
+    RFC-XXXX with the RFC number of this specification and remove this
+    note.
 
-The contact for the allocation is: IETF CORE Working Group
-      (core@ietf.org) or IETF Applications and Real-Time Area
-      (art@ietf.org).
+[^replace-xxxx]
+
+This document allocates 100 000 63-bit and 1000 32-bit SID mega-ranges
+as per {{Section 6.3 of -core-sid}}, as summarized in {{tab-allocations}}.
+
+| Entry Point                           | Size            | Allocation | Org<br>Name | URL                                 |
+| 3 000 000 000 up to 3 999 999 999     | 1 000 000 000   | Private    | IANA        | https://rfc-editor.org/info/rfcxxxx |
+| 300 000 000 000 up to 399 999 999 999 | 100 000 000 000 | Private    | IANA        | https://rfc-editor.org/info/rfcxxxx |
+{: #tab-allocations title="Megarange Allocations for use by PEN holders"}
+
+An additional contact for the allocation is: IETF CORE Working Group
+(core@ietf.org) or IETF Applications and Real-Time Area
+(art@ietf.org).
 
 The allocation policy inside the mega-range is "private".
 The URL is that of the present specification.
