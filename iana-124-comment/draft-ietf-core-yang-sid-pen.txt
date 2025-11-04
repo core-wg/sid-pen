@@ -4,8 +4,8 @@
 
 CoRE Working Group                                            C. Bormann
 Internet-Draft                                    Universität Bremen TZI
-Intended status: Informational                           1 November 2025
-Expires: 5 May 2026
+Intended status: Informational                           4 November 2025
+Expires: 8 May 2026
 
 
             YANG-CBOR: Allocating SID ranges for PEN holders
@@ -53,7 +53,7 @@ About This Document
 
 
 
-Bormann                    Expires 5 May 2026                   [Page 1]
+Bormann                    Expires 8 May 2026                   [Page 1]
 
 Internet-Draft         SID ranges for PEN holders          November 2025
 
@@ -73,7 +73,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 5 May 2026.
+   This Internet-Draft will expire on 8 May 2026.
 
 Copyright Notice
 
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Bormann                    Expires 5 May 2026                   [Page 2]
+Bormann                    Expires 8 May 2026                   [Page 2]
 
 Internet-Draft         SID ranges for PEN holders          November 2025
 
@@ -165,7 +165,7 @@ Internet-Draft         SID ranges for PEN holders          November 2025
 
 
 
-Bormann                    Expires 5 May 2026                   [Page 3]
+Bormann                    Expires 8 May 2026                   [Page 3]
 
 Internet-Draft         SID ranges for PEN holders          November 2025
 
@@ -221,7 +221,7 @@ Internet-Draft         SID ranges for PEN holders          November 2025
 
 
 
-Bormann                    Expires 5 May 2026                   [Page 4]
+Bormann                    Expires 8 May 2026                   [Page 4]
 
 Internet-Draft         SID ranges for PEN holders          November 2025
 
@@ -252,7 +252,7 @@ Internet-Draft         SID ranges for PEN holders          November 2025
    |399 999 999 999 |               |          |    | rfcxxxx          |
    +----------------+---------------+----------+----+------------------+
 
-         Table 1: Megarange Allocations for use by SID PEN holders
+           Table 1: Megarange Allocations for use by PEN holders
 
    An additional contact for the allocation is: IETF CORE Working Group
    (core@ietf.org) or IETF Applications and Real-Time Area
@@ -277,7 +277,7 @@ Internet-Draft         SID ranges for PEN holders          November 2025
 
 
 
-Bormann                    Expires 5 May 2026                   [Page 5]
+Bormann                    Expires 8 May 2026                   [Page 5]
 
 Internet-Draft         SID ranges for PEN holders          November 2025
 
@@ -333,7 +333,7 @@ Internet-Draft         SID ranges for PEN holders          November 2025
 
 
 
-Bormann                    Expires 5 May 2026                   [Page 6]
+Bormann                    Expires 8 May 2026                   [Page 6]
 
 Internet-Draft         SID ranges for PEN holders          November 2025
 
@@ -389,4 +389,4 @@ Author's Address
 
 
 
-Bormann                    Expires 5 May 2026                   [Page 7]
+Bormann                    Expires 8 May 2026                   [Page 7]
