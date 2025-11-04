@@ -1060,11 +1060,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">SID ranges for PEN holders</td>
-<td class="right">October 2025</td>
+<td class="right">November 2025</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Bormann</td>
-<td class="center">Expires 30 April 2026</td>
+<td class="center">Expires 8 May 2026</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1077,12 +1077,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-ietf-core-yang-sid-pen-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-10-27" class="published">27 October 2025</time>
+<time datetime="2025-11-04" class="published">4 November 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2026-04-30">30 April 2026</time></dd>
+<dd class="expires"><time datetime="2026-05-08">8 May 2026</time></dd>
 <dt class="label-authors">Author:</dt>
 <dd class="authors">
 <div class="author">
@@ -1148,7 +1148,7 @@ the course of further processing.</span><a href="#section-abstract-3" class="pil
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 30 April 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 8 May 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1339,24 +1339,60 @@ PEN.<a href="#section-3-3" class="pilcrow">¶</a></p>
       <h2 id="name-iana-considerations">
 <a href="#section-4" class="section-number selfRef">4. </a><a href="#name-iana-considerations" class="section-name selfRef">IANA Considerations</a>
       </h2>
-<p id="section-4-1">This document allocates 100 000 63-bit and 1000 32-bit SID mega-ranges
-as per <span><a href="https://rfc-editor.org/rfc/rfc9595#section-6.3" class="relref">Section 6.3</a> of [<a href="#RFC9595" class="cite xref">RFC9595</a>]</span>.<a href="#section-4-1" class="pilcrow">¶</a></p>
-<p id="section-4-2">The contact for the allocation is: IETF CORE Working Group
-      (core@ietf.org) or IETF Applications and Real-Time Area
-      (art@ietf.org).<a href="#section-4-2" class="pilcrow">¶</a></p>
-<p id="section-4-3">The allocation policy inside the mega-range is "private".
-The URL is that of the present specification.<a href="#section-4-3" class="pilcrow">¶</a></p>
-<p id="section-4-4">The management of the SID blocks of 100 000 SIDs each, 10 such blocks
+<p id="section-4-1"><span class="cref" id="replace-xxxx">RFC Ed.: throughout this section, please replace
+RFC-XXXX with the RFC number of this specification and remove this
+note.</span><a href="#section-4-1" class="pilcrow">¶</a></p>
+<p id="section-4-2">This document allocates 100 000 63-bit and 1000 32-bit SID mega-ranges
+as per <span><a href="https://rfc-editor.org/rfc/rfc9595#section-6.3" class="relref">Section 6.3</a> of [<a href="#RFC9595" class="cite xref">RFC9595</a>]</span>, as summarized in <a href="#tab-allocations" class="auto internal xref">Table 1</a>.<a href="#section-4-2" class="pilcrow">¶</a></p>
+<span id="name-megarange-allocations-for-u"></span><div id="tab-allocations">
+<table class="center" id="table-1">
+        <caption>
+<a href="#table-1" class="selfRef">Table 1</a>:
+<a href="#name-megarange-allocations-for-u" class="selfRef">Megarange Allocations for use by PEN holders</a>
+        </caption>
+<thead>
+          <tr>
+            <th class="text-left" rowspan="1" colspan="1">Entry Point</th>
+            <th class="text-left" rowspan="1" colspan="1">Size</th>
+            <th class="text-left" rowspan="1" colspan="1">Allocation</th>
+            <th class="text-left" rowspan="1" colspan="1">Org<br>Name</th>
+            <th class="text-left" rowspan="1" colspan="1">URL</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="text-left" rowspan="1" colspan="1">3 000 000 000 up to 3 999 999 999</td>
+            <td class="text-left" rowspan="1" colspan="1">1 000 000 000</td>
+            <td class="text-left" rowspan="1" colspan="1">Private</td>
+            <td class="text-left" rowspan="1" colspan="1">IANA</td>
+            <td class="text-left" rowspan="1" colspan="1">https://rfc-editor.org/info/rfcxxxx</td>
+          </tr>
+          <tr>
+            <td class="text-left" rowspan="1" colspan="1">300 000 000 000 up to 399 999 999 999</td>
+            <td class="text-left" rowspan="1" colspan="1">100 000 000 000</td>
+            <td class="text-left" rowspan="1" colspan="1">Private</td>
+            <td class="text-left" rowspan="1" colspan="1">IANA</td>
+            <td class="text-left" rowspan="1" colspan="1">https://rfc-editor.org/info/rfcxxxx</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+<p id="section-4-4">An additional contact for the allocation is: IETF CORE Working Group
+(core@ietf.org) or IETF Applications and Real-Time Area
+(art@ietf.org).<a href="#section-4-4" class="pilcrow">¶</a></p>
+<p id="section-4-5">The allocation policy inside the mega-range is "private".
+The URL is that of the present specification.<a href="#section-4-5" class="pilcrow">¶</a></p>
+<p id="section-4-6">The management of the SID blocks of 100 000 SIDs each, 10 such blocks
 for each mega-range 3nn nnn 000 000, is delegated to the PEN holder
 for nnn nnx, where x is the sequence number of the SID block in the
 mega-range (i.e., the PEN holder for nnn nnx controls SID
-3nn nnn x00 000 to 3nn nnn x99 999).<a href="#section-4-4" class="pilcrow">¶</a></p>
-<p id="section-4-5">Similarly, the management of the SID blocks of 10 000 SIDs each, 100 such blocks
+3nn nnn x00 000 to 3nn nnn x99 999).<a href="#section-4-6" class="pilcrow">¶</a></p>
+<p id="section-4-7">Similarly, the management of the SID blocks of 10 000 SIDs each, 100 such blocks
 for each mega-range 3 nnn 000 000, is delegated to the PEN holder
 for nn nxx, where x is the sequence number of the SID block in the
 mega-range (i.e., the PEN holder for nn nxx controls SID
-3 nnn xx0 000 to 3 nnn xx9 999).<a href="#section-4-5" class="pilcrow">¶</a></p>
-<p id="section-4-6"><span><a href="https://rfc-editor.org/rfc/rfc9595#section-6.3.2" class="relref">Section 6.3.2</a> of [<a href="#RFC9595" class="cite xref">RFC9595</a>]</span> requires an organization that requests an
+3 nnn xx0 000 to 3 nnn xx9 999).<a href="#section-4-7" class="pilcrow">¶</a></p>
+<p id="section-4-8"><span><a href="https://rfc-editor.org/rfc/rfc9595#section-6.3.2" class="relref">Section 6.3.2</a> of [<a href="#RFC9595" class="cite xref">RFC9595</a>]</span> requires an organization that requests an
 entry in the "YANG-SID Mega-Ranges" registry to ensure the technical
 capacity to manage the SID ranges within those mega-ranges for a
 period of at least 10 years (Private ranges).
@@ -1365,7 +1401,7 @@ document are assigned through the registration of PEN numbers.
 The technical capacity to ensure the sustained operation of the PEN
 number registry is derived from the demonstrated capacity of IANA to
 maintain this registry as well as the importance of a functioning PEN
-number registry in other contexts.<a href="#section-4-6" class="pilcrow">¶</a></p>
+number registry in other contexts.<a href="#section-4-8" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="security-considerations">

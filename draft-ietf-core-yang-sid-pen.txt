@@ -4,8 +4,8 @@
 
 CoRE Working Group                                            C. Bormann
 Internet-Draft                                    Universität Bremen TZI
-Intended status: Informational                           27 October 2025
-Expires: 30 April 2026
+Intended status: Informational                           4 November 2025
+Expires: 8 May 2026
 
 
             YANG-CBOR: Allocating SID ranges for PEN holders
@@ -53,9 +53,9 @@ About This Document
 
 
 
-Bormann                   Expires 30 April 2026                 [Page 1]
+Bormann                    Expires 8 May 2026                   [Page 1]
 
-Internet-Draft         SID ranges for PEN holders           October 2025
+Internet-Draft         SID ranges for PEN holders          November 2025
 
 
 Status of This Memo
@@ -73,7 +73,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 30 April 2026.
+   This Internet-Draft will expire on 8 May 2026.
 
 Copyright Notice
 
@@ -95,7 +95,7 @@ Table of Contents
    2.  Example . . . . . . . . . . . . . . . . . . . . . . . . . . .   3
    3.  Discussion  . . . . . . . . . . . . . . . . . . . . . . . . .   4
    4.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   5
-   5.  Security Considerations . . . . . . . . . . . . . . . . . . .   5
+   5.  Security Considerations . . . . . . . . . . . . . . . . . . .   6
    6.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   6
      6.1.  Normative References  . . . . . . . . . . . . . . . . . .   6
      6.2.  Informative References  . . . . . . . . . . . . . . . . .   6
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Bormann                   Expires 30 April 2026                 [Page 2]
+Bormann                    Expires 8 May 2026                   [Page 2]
 
-Internet-Draft         SID ranges for PEN holders           October 2025
+Internet-Draft         SID ranges for PEN holders          November 2025
 
 
 1.  Introduction
@@ -165,9 +165,9 @@ Internet-Draft         SID ranges for PEN holders           October 2025
 
 
 
-Bormann                   Expires 30 April 2026                 [Page 3]
+Bormann                    Expires 8 May 2026                   [Page 3]
 
-Internet-Draft         SID ranges for PEN holders           October 2025
+Internet-Draft         SID ranges for PEN holders          November 2025
 
 
    (The plaintext form of this document shows "*" characters around the
@@ -221,9 +221,9 @@ Internet-Draft         SID ranges for PEN holders           October 2025
 
 
 
-Bormann                   Expires 30 April 2026                 [Page 4]
+Bormann                    Expires 8 May 2026                   [Page 4]
 
-Internet-Draft         SID ranges for PEN holders           October 2025
+Internet-Draft         SID ranges for PEN holders          November 2025
 
 
    to be in force with no technical changes as Section 3.1.4 of RFC 1155
@@ -232,10 +232,29 @@ Internet-Draft         SID ranges for PEN holders           October 2025
 
 4.  IANA Considerations
 
-   This document allocates 100 000 63-bit and 1000 32-bit SID mega-
-   ranges as per Section 6.3 of [RFC9595].
 
-   The contact for the allocation is: IETF CORE Working Group
+   // RFC Ed.: throughout this section, please replace RFC-XXXX with the
+   // RFC number of this specification and remove this note.
+
+   This document allocates 100 000 63-bit and 1000 32-bit SID mega-
+   ranges as per Section 6.3 of [RFC9595], as summarized in Table 1.
+
+   +================+===============+==========+====+==================+
+   |Entry Point     |Size           |Allocation|Org | URL              |
+   |                |               |          |Name|                  |
+   +================+===============+==========+====+==================+
+   |3 000 000 000   |1 000 000 000  |Private   |IANA| https://rfc-     |
+   |up to           |               |          |    | editor.org/info/ |
+   |3 999 999 999   |               |          |    | rfcxxxx          |
+   +----------------+---------------+----------+----+------------------+
+   |300 000 000 000 |100 000 000 000|Private   |IANA| https://rfc-     |
+   |up to           |               |          |    | editor.org/info/ |
+   |399 999 999 999 |               |          |    | rfcxxxx          |
+   +----------------+---------------+----------+----+------------------+
+
+           Table 1: Megarange Allocations for use by PEN holders
+
+   An additional contact for the allocation is: IETF CORE Working Group
    (core@ietf.org) or IETF Applications and Real-Time Area
    (art@ietf.org).
 
@@ -253,6 +272,15 @@ Internet-Draft         SID ranges for PEN holders           October 2025
    PEN holder for nn nxx, where x is the sequence number of the SID
    block in the mega-range (i.e., the PEN holder for nn nxx controls SID
    3 nnn xx0 000 to 3 nnn xx9 999).
+
+
+
+
+
+Bormann                    Expires 8 May 2026                   [Page 5]
+
+Internet-Draft         SID ranges for PEN holders          November 2025
+
 
    Section 6.3.2 of [RFC9595] requires an organization that requests an
    entry in the "YANG-SID Mega-Ranges" registry to ensure the technical
@@ -274,14 +302,6 @@ Internet-Draft         SID ranges for PEN holders           October 2025
    or underlying YANG model actually does originate from the holder of
    that PEN.  The requirement to ascertain the authoritative source of
    this information, as discussed in the above security considerations,
-
-
-
-Bormann                   Expires 30 April 2026                 [Page 5]
-
-Internet-Draft         SID ranges for PEN holders           October 2025
-
-
    remains.
 
 6.  References
@@ -311,6 +331,13 @@ Internet-Draft         SID ranges for PEN holders           October 2025
               <https://datatracker.ietf.org/doc/html/draft-ietf-core-
               yang-library-03>.
 
+
+
+Bormann                    Expires 8 May 2026                   [Page 6]
+
+Internet-Draft         SID ranges for PEN holders          November 2025
+
+
    [RFC1065]  McCloghrie, K. and M. Rose, "Structure and identification
               of management information for TCP/IP-based internets",
               RFC 1065, DOI 10.17487/RFC1065, August 1988,
@@ -329,14 +356,6 @@ Internet-Draft         SID ranges for PEN holders           October 2025
               of management information for TCP/IP-based internets",
               STD 16, RFC 1155, DOI 10.17487/RFC1155, May 1990,
               <https://www.rfc-editor.org/info/rfc1155>.
-
-
-
-
-Bormann                   Expires 30 April 2026                 [Page 6]
-
-Internet-Draft         SID ranges for PEN holders           October 2025
-
 
               Rose, M. and K. McCloghrie, "Concise MIB definitions",
               STD 16, RFC 1212, DOI 10.17487/RFC1212, March 1991,
@@ -370,23 +389,4 @@ Author's Address
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Bormann                   Expires 30 April 2026                 [Page 7]
+Bormann                    Expires 8 May 2026                   [Page 7]
