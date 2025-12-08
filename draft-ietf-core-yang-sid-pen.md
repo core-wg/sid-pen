@@ -76,8 +76,8 @@ YANG-CBOR (RFC 9254) [^abs1a-] RFC 9595 [^abs1b-]
 [^status]
 
 [^status]:\\
-    The present revision –03 is intended to address the feedback from
-    the CoRE Working-Group last call.
+    The present revision –04 is intended to address the feedback from
+    the AD review and the IETF last call.
     \\
     Note that due to a regression in the `bib.ietf.org` service
     (<https://github.com/ietf-tools/bibxml-service/issues/489>), the
@@ -93,11 +93,11 @@ YANG-CBOR {{-yang-cbor}} [^abs1a-] {{-core-sid}} [^abs1b-]
 
 [^abs2-]
 
-IANA \[is requested to allocate/has allocated] 100 000 mega-ranges, for the SID numbers
-300 000 000 000 to 399 999 999 999.
+IANA \[is requested to allocate/has allocated] a mega-range with
+100 billion 63-bit SIDs, for the SID numbers 300 000 000 000 to 399 999 999 999.
 
-IANA also \[is requested to allocate/has allocated] 1000 mega-ranges, for the SID numbers
-3 000 000 000 to 3 999 999 999.
+IANA also \[is requested to allocate/has allocated] a mega-range with
+1 billion 32-bit SIDs, for the SID numbers 3 000 000 000 to 3 999 999 999.
 
 Private Enterprise Numbers (PENs) are registered in
 {{IANA.enterprise-numbers}} in a low-threshold, low-overhead
@@ -185,13 +185,20 @@ PEN.
 
 [^replace-xxxx]
 
-This document allocates 100 000 63-bit and 1000 32-bit SID mega-ranges
-as per {{Section 6.3 of -core-sid}}, as summarized in {{tab-allocations}}.
+As per {{Section 6.3 of -core-sid}},
+in the YANG-SID Mega-Ranges registry within the YANG SIDs registry group,
+this document allocates two mega-ranges, one with 1 billion
+SIDs ranging from 3 000 000 000 up to 3 999 999 999 (32-bit
+representation size), and
+one with 100 billion
+SIDs ranging from 300 000 000 000 up to 399 999 999 999 (64-bit
+representation size),
+as summarized in {{tab-allocations}}.
 
-| Entry Point                           | Size            | Allocation | Org<br>Name | URL                                 |
-| 3 000 000 000 up to 3 999 999 999     | 1 000 000 000   | Private    | IANA        | https://rfc-editor.org/info/rfcxxxx |
-| 300 000 000 000 up to 399 999 999 999 | 100 000 000 000 | Private    | IANA        | https://rfc-editor.org/info/rfcxxxx |
-{: #tab-allocations title="Megarange Allocations for use by PEN holders"}
+| Entry Point        | Size               | Allocation | Org<br>Name | URL                                 |
+| 3 000 000 000   | 1 000 000 000   | Private    | IANA     | https://rfc-editor.org/info/rfcxxxx |
+| 300 000 000 000 | 100 000 000 000 | Private    | IANA     | https://rfc-editor.org/info/rfcxxxx |
+{: #tab-allocations title="YANG-SID Mega-Range Allocations for use by PEN holders"}
 
 An additional contact for the allocation is: IETF CORE Working Group
 (core@ietf.org) or IETF Applications and Real-Time Area
@@ -200,17 +207,15 @@ An additional contact for the allocation is: IETF CORE Working Group
 The allocation policy inside the mega-range is "private".
 The URL is that of the present specification.
 
-The management of the SID blocks of 100 000 SIDs each, 10 such blocks
-for each mega-range 3nn nnn 000 000, is delegated to the PEN holder
-for nnn nnx, where x is the sequence number of the SID block in the
-mega-range (i.e., the PEN holder for nnn nnx controls SID
-3nn nnn x00 000 to 3nn nnn x99 999).
+The management of the SID block of 100 000 SIDs each, ranging from
+3pp ppp p00 000 to 3pp ppp p99 999, is delegated to the PEN holder
+for PEN ppp ppp (i.e., the PEN holder for ppp ppp controls SID
+3pp ppp p00 000 to 3pp ppp p99 999).
 
-Similarly, the management of the SID blocks of 10 000 SIDs each, 100 such blocks
-for each mega-range 3 nnn 000 000, is delegated to the PEN holder
-for nn nxx, where x is the sequence number of the SID block in the
-mega-range (i.e., the PEN holder for nn nxx controls SID
-3 nnn xx0 000 to 3 nnn xx9 999).
+Similarly, the management of the SID block of 10 000 SIDs each,
+ranging from 3 ppp pp0 000 to 3 ppp pp9 999, is delegated to the PEN holder
+for PEN pp ppp (i.e., the PEN holder for pp ppp controls SID
+3 ppp pp0 000 to 3 ppp pp9 999).
 
 {{Section 6.3.2 of -core-sid}} requires an organization that requests an
 entry in the "YANG-SID Mega-Ranges" registry to ensure the technical
