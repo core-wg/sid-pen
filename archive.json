@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-12-07T01:24:01.125186+00:00",
+  "timestamp": "2025-12-09T01:16:53.162433+00:00",
   "repo": "core-wg/sid-pen",
   "labels": [
     {
@@ -239,6 +239,48 @@
       },
       "comments": [],
       "reviews": []
+    },
+    {
+      "number": 5,
+      "id": "PR_kwDOGPqYRM63vH8s",
+      "title": "Address AD review and IETF last call",
+      "url": "https://github.com/core-wg/sid-pen/pull/5",
+      "state": "MERGED",
+      "author": "cabo",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-12-08T17:56:16Z",
+      "updatedAt": "2025-12-08T19:32:40Z",
+      "baseRepository": "core-wg/sid-pen",
+      "baseRefName": "main",
+      "baseRefOid": "85c0a07b7f75e2f7fff6bbb8ec54be177b851b08",
+      "headRepository": "core-wg/sid-pen",
+      "headRefName": "ad-review-ietf-last-call",
+      "headRefOid": "0ec5c25b31c290ee026a44fa60d79b8863ac0676",
+      "closedAt": "2025-12-08T19:32:39Z",
+      "mergedAt": "2025-12-08T19:32:39Z",
+      "mergedBy": "cabo",
+      "mergeCommit": {
+        "oid": "39335897baf5e2c988ee21b169aebc7b41b47ea7"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOGPqYRM7TzY7I",
+          "commit": {
+            "abbreviatedOid": "0ec5c25"
+          },
+          "author": "marco-tiloca-sics",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-12-08T18:21:48Z",
+          "updatedAt": "2025-12-08T18:21:48Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
