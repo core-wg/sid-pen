@@ -51,6 +51,7 @@ normative:
 informative:
   RFC1065:
   STD16: # RFC 1155, Section 3.1.4
+  RFC5612: pen-doc
   I-D.ietf-core-yang-library: core-yang-library
   RFC8525: yang-library
 
@@ -117,17 +118,22 @@ by the holder:
 
 # Example
 
-The Department for Mathematics and Computer Science of {{{Universität Bremen}}} holds PEN 30810.
+{{-pen-doc}} has allocated Enterprise Number 32473 "for use in examples
+in RFCs, books, documentation, and the like".
 
-To this PEN holder, the present specification confers control over the
-SID ranges:
+If this Enterprise Number had an actual PEN holder, the present
+specification would confer control to it over the SID ranges:
 
-* 3**03 081 0**00 000 up to 3**03 081 0**99 999, and
-* 3 **308 10**0 000 up to 3 **308 10**9 999.
+* 3**03 247 3**00 000 up to 3**03 247 3**99 999, and
+* 3 **324 73**0 000 up to 3 **324 73**9 999.
 
 (The plaintext form of this document shows "*" characters around the
 digits conveying the PEN, which are shown in **boldface** in the
 typographic forms.)
+
+As Enterprise Number 32473 is intended to be used in documentation,
+the SIDs in the two SID ranges given here are also available for use in
+documentation.
 
 # Discussion
 
