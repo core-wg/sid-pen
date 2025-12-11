@@ -57,7 +57,9 @@ informative:
 
 --- abstract
 
-YANG-CBOR (RFC 9254) [^abs1a-] RFC 9595 [^abs1b-]
+YANG-CBOR (RFC 9254, "Encoding of Data Modeled with YANG in the
+Concise Binary Object Representation (CBOR)") [^abs1a-] RFC 9595
+("YANG Schema Item iDentifier (YANG SID)") [^abs1b-]
 
 [^abs1a-]: defines
         YANG Schema Item iDentifiers (YANG SID), globally unique 63-bit
