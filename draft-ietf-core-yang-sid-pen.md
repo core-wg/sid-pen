@@ -208,6 +208,11 @@ as summarized in {{tab-allocations}}.
 | 300 000 000 000 | 100 000 000 000 | Private    | IANA     | https://rfc-editor.org/info/rfcxxxx |
 {: #tab-allocations title="YANG-SID Mega-Range Allocations for use by PEN holders"}
 
+IANA is requested to mark the following ranges as reserved for documentation:
+
+* 303 247 300 000 up to 303 247 399 999
+* 3 324 730 000 up to 3 324 739 999
+
 An additional contact for the allocation is: IETF CORE Working Group
 (core@ietf.org) or IETF Applications and Real-Time Area
 (art@ietf.org).
