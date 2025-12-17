@@ -243,12 +243,13 @@ Internet-Draft         SID ranges for PEN holders          December 2025
    // RFC Ed.: throughout this section, please replace RFC-XXXX with the
    // RFC number of this specification and remove this note.
 
-   As per Section 6.3 of [RFC9595], in the YANG-SID Mega-Ranges registry
-   within the YANG SIDs registry group, this document allocates two
-   mega-ranges, one with 1 billion SIDs ranging from 3 000 000 000 up to
-   3 999 999 999 (32-bit representation size), and one with 100 billion
-   SIDs ranging from 300 000 000 000 up to 399 999 999 999 (64-bit
-   representation size), as summarized in Table 1.
+   As per Section 6.3 of [RFC9595], in the "YANG-SID Mega-Ranges"
+   registry within the "YANG SIDs" registry group [IANA.yang-sid], this
+   document allocates two mega-ranges, one with 1 billion SIDs ranging
+   from 3 000 000 000 up to 3 999 999 999 (32-bit representation size),
+   and one with 100 billion SIDs ranging from 300 000 000 000 up to
+   399 999 999 999 (64-bit representation size), as summarized in
+   Table 1.
 
    +===============+===============+==========+====+==================+
    |Entry Point    |Size           |Allocation|Org | URL              |
@@ -271,7 +272,6 @@ Internet-Draft         SID ranges for PEN holders          December 2025
    *  303 247 300 000 up to 303 247 399 999
 
    *  3 324 730 000 up to 3 324 739 999
-
 
 
 
@@ -326,8 +326,8 @@ Internet-Draft         SID ranges for PEN holders          December 2025
 6.1.  Normative References
 
    [IANA.enterprise-numbers]
-              "*** BROKEN REFERENCE ***".
-
+              IANA, "Enterprise Numbers",
+              <http://www.iana.org/assignments/enterprise-numbers>.
 
 
 
@@ -337,6 +337,10 @@ Bormann                   Expires 20 June 2026                  [Page 6]
 
 Internet-Draft         SID ranges for PEN holders          December 2025
 
+
+   [IANA.yang-sid]
+              IANA, "YANG SIDs",
+              <https://www.iana.org/assignments/yang-sid>.
 
    [RFC9254]  Veillette, M., Ed., Petrov, I., Ed., Pelov, A., Bormann,
               C., and M. Richardson, "Encoding of Data Modeled with YANG
@@ -381,10 +385,6 @@ Internet-Draft         SID ranges for PEN holders          December 2025
               STD 16, RFC 1155, DOI 10.17487/RFC1155, May 1990,
               <https://www.rfc-editor.org/info/rfc1155>.
 
-              Rose, M. and K. McCloghrie, "Concise MIB definitions",
-              STD 16, RFC 1212, DOI 10.17487/RFC1212, March 1991,
-              <https://www.rfc-editor.org/info/rfc1212>.
-
 
 
 
@@ -393,6 +393,10 @@ Bormann                   Expires 20 June 2026                  [Page 7]
 
 Internet-Draft         SID ranges for PEN holders          December 2025
 
+
+              Rose, M. and K. McCloghrie, "Concise MIB definitions",
+              STD 16, RFC 1212, DOI 10.17487/RFC1212, March 1991,
+              <https://www.rfc-editor.org/info/rfc1212>.
 
 Acknowledgments
 
@@ -408,10 +412,6 @@ Author's Address
    Germany
    Phone: +49-421-218-63921
    Email: cabo@tzi.org
-
-
-
-
 
 
 
