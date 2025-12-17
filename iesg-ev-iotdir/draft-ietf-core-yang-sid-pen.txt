@@ -286,8 +286,9 @@ Internet-Draft         SID ranges for PEN holders          December 2025
    (core@ietf.org) or IETF Applications and Real-Time Area
    (art@ietf.org).
 
-   The allocation policy inside the mega-range is "private".  The URL is
-   that of the present specification.
+   The allocation policy inside the mega-range is "private" (see
+   Section 6.3.2 of [RFC9595]).  The URL is that of the present
+   specification.
 
    The management of the SID block of 100 000 SIDs each, ranging from
    3pp ppp p00 000 to 3pp ppp p99 999, is delegated to the PEN holder
@@ -328,7 +329,6 @@ Internet-Draft         SID ranges for PEN holders          December 2025
    [IANA.enterprise-numbers]
               IANA, "Enterprise Numbers",
               <http://www.iana.org/assignments/enterprise-numbers>.
-
 
 
 
