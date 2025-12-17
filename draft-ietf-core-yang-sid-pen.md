@@ -119,7 +119,7 @@ by the holder:
 
 * The holder of a PEN ppp ppp (< 1 000 000) can use the SID numbers
 3pp ppp p00 000 to 3pp ppp p99 999.
-* The holder of a PEN pp ppp (< 100 000) can use the SID numbers
+* The holder of a PEN pp ppp (< 100 000) can also use the smaller SID numbers
 3 ppp pp0 000 to 3 ppp pp9 999.
 
 # Example
