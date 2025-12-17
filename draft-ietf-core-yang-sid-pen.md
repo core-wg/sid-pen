@@ -51,12 +51,15 @@ normative:
 informative:
   RFC1065:
   STD16: # RFC 1155, Section 3.1.4
+  RFC5612: pen-doc
   I-D.ietf-core-yang-library: core-yang-library
   RFC8525: yang-library
 
 --- abstract
 
-YANG-CBOR (RFC 9254) [^abs1a-] RFC 9595 [^abs1b-]
+YANG-CBOR (RFC 9254, "Encoding of Data Modeled with YANG in the
+Concise Binary Object Representation (CBOR)") [^abs1a-] RFC 9595
+("YANG Schema Item iDentifier (YANG SID)") [^abs1b-]
 
 [^abs1a-]: defines
         YANG Schema Item iDentifiers (YANG SID), globally unique 63-bit
@@ -117,17 +120,22 @@ by the holder:
 
 # Example
 
-The Department for Mathematics and Computer Science of {{{Universität Bremen}}} holds PEN 30810.
+{{-pen-doc}} has allocated Enterprise Number 32473 "for use in examples
+in RFCs, books, documentation, and the like".
 
-To this PEN holder, the present specification confers control over the
-SID ranges:
+If this Enterprise Number had an actual PEN holder, the present
+specification would confer control to it over the SID ranges:
 
-* 3**03 081 0**00 000 up to 3**03 081 0**99 999, and
-* 3 **308 10**0 000 up to 3 **308 10**9 999.
+* 3**03 247 3**00 000 up to 3**03 247 3**99 999, and
+* 3 **324 73**0 000 up to 3 **324 73**9 999.
 
 (The plaintext form of this document shows "*" characters around the
 digits conveying the PEN, which are shown in **boldface** in the
 typographic forms.)
+
+As Enterprise Number 32473 is intended to be used in documentation,
+the SIDs in the two SID ranges given here are also available for use in
+documentation.
 
 # Discussion
 
@@ -199,6 +207,11 @@ as summarized in {{tab-allocations}}.
 | 3 000 000 000   | 1 000 000 000   | Private    | IANA     | https://rfc-editor.org/info/rfcxxxx |
 | 300 000 000 000 | 100 000 000 000 | Private    | IANA     | https://rfc-editor.org/info/rfcxxxx |
 {: #tab-allocations title="YANG-SID Mega-Range Allocations for use by PEN holders"}
+
+IANA is requested to mark the following ranges as reserved for documentation:
+
+* 303 247 300 000 up to 303 247 399 999
+* 3 324 730 000 up to 3 324 739 999
 
 An additional contact for the allocation is: IETF CORE Working Group
 (core@ietf.org) or IETF Applications and Real-Time Area
