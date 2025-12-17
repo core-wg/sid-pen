@@ -28,14 +28,14 @@ Abstract
    100 000.
 
 
-   // The present revision –04 is intended to address the feedback from
-   // the AD review and the IETF last call.  Note that due to a
+   // The present revision –05 is intended to address the feedback from
+   // the directorate reviews and early IESG feedback, in time for the
+   // IESG meeting.  It also adds cached information to work around the
    // regression in the bib.ietf.org service (https://github.com/ietf-
-   // tools/bibxml-service/issues/489 (https://github.com/ietf-tools/
-   // bibxml-service/issues/489)), the reference
-   // [IANA.enterprise-numbers] may come out as "*** BROKEN REFERENCE
-   // ***" in some CI systems; this will certainly be fixed in the
-   // course of further processing.
+   // tools/bibxml- service/issues/489 (https://github.com/ietf-tools/
+   // bibxml-service/ issues/489)) that caused the reference
+   // [IANA.enterprise-numbers] to come out as "*** BROKEN REFERENCE
+   // ***" in some CI systems.
 
 About This Document
 
