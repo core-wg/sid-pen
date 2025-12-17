@@ -37,16 +37,16 @@ venue:
 normative:
   RFC9254: yang-cbor
   RFC9595: core-sid
-  IANA.enterprise-numbers: iana-pen
-# Reference information as cached on the author's laptop, in case we
+#  IANA.enterprise-numbers: iana-pen
+# Reference information as cached on the author's laptop, as long as we
 # don't get https://github.com/ietf-tools/bibxml-service/issues/489 fixed:
-#  IANA.enterprise-numbers:
-#    -: iana-pen
-#    target: http://www.iana.org/assignments/enterprise-numbers
-#    title: Enterprise Numbers
-#    author:
-#    - org: IANA
-#    date: false
+  IANA.enterprise-numbers:
+    -: iana-pen
+    target: http://www.iana.org/assignments/enterprise-numbers
+    title: Enterprise Numbers
+    author:
+    - org: IANA
+    date: false
 
 informative:
   RFC1065:
