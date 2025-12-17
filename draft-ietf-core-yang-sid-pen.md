@@ -82,14 +82,15 @@ Concise Binary Object Representation (CBOR)") [^abs1a-] RFC 9595
 [^status]
 
 [^status]:\\
-    The present revision –04 is intended to address the feedback from
-    the AD review and the IETF last call.
+    The present revision –05 is intended to address the feedback from
+    the directorate reviews and early IESG feedback, in time for the
+    IESG meeting.
     \\
-    Note that due to a regression in the `bib.ietf.org` service
-    (<https://github.com/ietf-tools/bibxml-service/issues/489>), the
-    reference [IANA.enterprise-numbers] may come out as "\*\*\* BROKEN
-    REFERENCE \*\*\*" in some CI systems; this will certainly be fixed in
-    the course of further processing.
+    It also adds cached information to work around the regression in the `bib.ietf.org` service
+    (<https://github.com/ietf-tools/bibxml-service/issues/489>) that
+    caused the
+    reference [IANA.enterprise-numbers] to come out as "\*\*\* BROKEN
+    REFERENCE \*\*\*" in some CI systems.
 
 --- middle
 
