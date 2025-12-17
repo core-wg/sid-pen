@@ -223,7 +223,7 @@ An additional contact for the allocation is: IETF CORE Working Group
 (core@ietf.org) or IETF Applications and Real-Time Area
 (art@ietf.org).
 
-The allocation policy inside the mega-range is "private".
+The allocation policy inside the mega-range is "private" (see {{Section 6.3.2 of -core-sid}}).
 The URL is that of the present specification.
 
 The management of the SID block of 100 000 SIDs each, ranging from
