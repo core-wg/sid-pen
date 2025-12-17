@@ -47,6 +47,7 @@ normative:
     author:
     - org: IANA
     date: false
+  IANA.yang-sid: # This one works!
 
 informative:
   RFC1065:
@@ -198,7 +199,8 @@ PEN.
 [^replace-xxxx]
 
 As per {{Section 6.3 of -core-sid}},
-in the YANG-SID Mega-Ranges registry within the YANG SIDs registry group,
+in the {{sid-mega-range ("YANG-SID Mega-Ranges")<IANA.yang-sid}}
+registry within the "YANG SIDs" registry group {{IANA.yang-sid}},
 this document allocates two mega-ranges, one with 1 billion
 SIDs ranging from 3 000 000 000 up to 3 999 999 999 (32-bit
 representation size), and
