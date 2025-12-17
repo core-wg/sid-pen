@@ -4,8 +4,8 @@
 
 CoRE Working Group                                            C. Bormann
 Internet-Draft                                    Universität Bremen TZI
-Intended status: Informational                           8 December 2025
-Expires: 11 June 2026
+Intended status: Informational                          17 December 2025
+Expires: 20 June 2026
 
 
             YANG-CBOR: Allocating SID ranges for PEN holders
@@ -13,9 +13,11 @@ Expires: 11 June 2026
 
 Abstract
 
-   YANG-CBOR (RFC 9254) defines YANG Schema Item iDentifiers (YANG SID),
-   globally unique 63-bit unsigned integers used to identify YANG items.
-   RFC 9595 defines ways to allocate these SIDs on the basis of IANA
+   YANG-CBOR (RFC 9254, "Encoding of Data Modeled with YANG in the
+   Concise Binary Object Representation (CBOR)") defines YANG Schema
+   Item iDentifiers (YANG SID), globally unique 63-bit unsigned integers
+   used to identify YANG items.  RFC 9595 ("YANG Schema Item iDentifier
+   (YANG SID)") defines ways to allocate these SIDs on the basis of IANA
    registries.
 
    The present specification employs these SID allocation mechanisms to
@@ -51,9 +53,7 @@ About This Document
 
 
 
-
-
-Bormann                   Expires 11 June 2026                  [Page 1]
+Bormann                   Expires 20 June 2026                  [Page 1]
 
 Internet-Draft         SID ranges for PEN holders          December 2025
 
@@ -73,7 +73,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 11 June 2026.
+   This Internet-Draft will expire on 20 June 2026.
 
 Copyright Notice
 
@@ -98,9 +98,9 @@ Table of Contents
    5.  Security Considerations . . . . . . . . . . . . . . . . . . .   6
    6.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   6
      6.1.  Normative References  . . . . . . . . . . . . . . . . . .   6
-     6.2.  Informative References  . . . . . . . . . . . . . . . . .   6
-   Acknowledgments . . . . . . . . . . . . . . . . . . . . . . . . .   7
-   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   7
+     6.2.  Informative References  . . . . . . . . . . . . . . . . .   7
+   Acknowledgments . . . . . . . . . . . . . . . . . . . . . . . . .   8
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   8
 
 
 
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Bormann                   Expires 11 June 2026                  [Page 2]
+Bormann                   Expires 20 June 2026                  [Page 2]
 
 Internet-Draft         SID ranges for PEN holders          December 2025
 
@@ -154,27 +154,31 @@ Internet-Draft         SID ranges for PEN holders          December 2025
 
 2.  Example
 
-   The Department for Mathematics and Computer Science of Universität
-   Bremen holds PEN 30810.
+   [RFC5612] has allocated Enterprise Number 32473 "for use in examples
+   in RFCs, books, documentation, and the like".
 
-   To this PEN holder, the present specification confers control over
-   the SID ranges:
+   If this Enterprise Number had an actual PEN holder, the present
+   specification would confer control to it over the SID ranges:
 
-   *  3*03 081 0*00 000 up to 3*03 081 0*99 999, and
-
-
+   *  3*03 247 3*00 000 up to 3*03 247 3*99 999, and
 
 
-Bormann                   Expires 11 June 2026                  [Page 3]
+
+
+Bormann                   Expires 20 June 2026                  [Page 3]
 
 Internet-Draft         SID ranges for PEN holders          December 2025
 
 
-   *  3 *308 10*0 000 up to 3 *308 10*9 999.
+   *  3 *324 73*0 000 up to 3 *324 73*9 999.
 
    (The plaintext form of this document shows "*" characters around the
    digits conveying the PEN, which are shown in *boldface* in the
    typographic forms.)
+
+   As Enterprise Number 32473 is intended to be used in documentation,
+   the SIDs in the two SID ranges given here are also available for use
+   in documentation.
 
 3.  Discussion
 
@@ -213,18 +217,18 @@ Internet-Draft         SID ranges for PEN holders          December 2025
          repository may be easy to set up using a popular git forge such
          as, at the time of writing, GitHub.
 
-      -  Implementations that employ PEN-based SIDs can facilitate
-         information discovery by providing [I-D.ietf-core-yang-library]
-         or another form of YANG library [RFC8525].
 
 
 
 
-
-Bormann                   Expires 11 June 2026                  [Page 4]
+Bormann                   Expires 20 June 2026                  [Page 4]
 
 Internet-Draft         SID ranges for PEN holders          December 2025
 
+
+      -  Implementations that employ PEN-based SIDs can facilitate
+         information discovery by providing [I-D.ietf-core-yang-library]
+         or another form of YANG library [RFC8525].
 
    Relying on the PEN registry might theoretically trigger a land-grab
    by prospective writers of YANG modules.  However, PENs have been
@@ -261,6 +265,23 @@ Internet-Draft         SID ranges for PEN holders          December 2025
 
      Table 1: YANG-SID Mega-Range Allocations for use by PEN holders
 
+   IANA is requested to mark the following ranges as reserved for
+   documentation:
+
+   *  303 247 300 000 up to 303 247 399 999
+
+   *  3 324 730 000 up to 3 324 739 999
+
+
+
+
+
+
+Bormann                   Expires 20 June 2026                  [Page 5]
+
+Internet-Draft         SID ranges for PEN holders          December 2025
+
+
    An additional contact for the allocation is: IETF CORE Working Group
    (core@ietf.org) or IETF Applications and Real-Time Area
    (art@ietf.org).
@@ -272,15 +293,6 @@ Internet-Draft         SID ranges for PEN holders          December 2025
    3pp ppp p00 000 to 3pp ppp p99 999, is delegated to the PEN holder
    for PEN ppp ppp (i.e., the PEN holder for ppp ppp controls SID
    3pp ppp p00 000 to 3pp ppp p99 999).
-
-
-
-
-
-Bormann                   Expires 11 June 2026                  [Page 5]
-
-Internet-Draft         SID ranges for PEN holders          December 2025
-
 
    Similarly, the management of the SID block of 10 000 SIDs each,
    ranging from 3 ppp pp0 000 to 3 ppp pp9 999, is delegated to the PEN
@@ -316,6 +328,16 @@ Internet-Draft         SID ranges for PEN holders          December 2025
    [IANA.enterprise-numbers]
               "*** BROKEN REFERENCE ***".
 
+
+
+
+
+
+Bormann                   Expires 20 June 2026                  [Page 6]
+
+Internet-Draft         SID ranges for PEN holders          December 2025
+
+
    [RFC9254]  Veillette, M., Ed., Petrov, I., Ed., Pelov, A., Bormann,
               C., and M. Richardson, "Encoding of Data Modeled with YANG
               in the Concise Binary Object Representation (CBOR)",
@@ -329,15 +351,6 @@ Internet-Draft         SID ranges for PEN holders          December 2025
 
 6.2.  Informative References
 
-
-
-
-
-Bormann                   Expires 11 June 2026                  [Page 6]
-
-Internet-Draft         SID ranges for PEN holders          December 2025
-
-
    [I-D.ietf-core-yang-library]
               Veillette, M. and I. Petrov, "Constrained YANG Module
               Library", Work in Progress, Internet-Draft, draft-ietf-
@@ -349,6 +362,10 @@ Internet-Draft         SID ranges for PEN holders          December 2025
               of management information for TCP/IP-based internets",
               RFC 1065, DOI 10.17487/RFC1065, August 1988,
               <https://www.rfc-editor.org/rfc/rfc1065>.
+
+   [RFC5612]  Eronen, P. and D. Harrington, "Enterprise Number for
+              Documentation Use", RFC 5612, DOI 10.17487/RFC5612, August
+              2009, <https://www.rfc-editor.org/rfc/rfc5612>.
 
    [RFC8525]  Bierman, A., Bjorklund, M., Schoenwaelder, J., Watsen, K.,
               and R. Wilton, "YANG Library", RFC 8525,
@@ -367,6 +384,15 @@ Internet-Draft         SID ranges for PEN holders          December 2025
               Rose, M. and K. McCloghrie, "Concise MIB definitions",
               STD 16, RFC 1212, DOI 10.17487/RFC1212, March 1991,
               <https://www.rfc-editor.org/info/rfc1212>.
+
+
+
+
+
+Bormann                   Expires 20 June 2026                  [Page 7]
+
+Internet-Draft         SID ranges for PEN holders          December 2025
+
 
 Acknowledgments
 
@@ -389,4 +415,34 @@ Author's Address
 
 
 
-Bormann                   Expires 11 June 2026                  [Page 7]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Bormann                   Expires 20 June 2026                  [Page 8]
