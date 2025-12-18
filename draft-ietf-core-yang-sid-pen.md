@@ -37,16 +37,17 @@ venue:
 normative:
   RFC9254: yang-cbor
   RFC9595: core-sid
-  IANA.enterprise-numbers: iana-pen
-# Reference information as cached on the author's laptop, in case we
+#  IANA.enterprise-numbers: iana-pen
+# Reference information as cached on the author's laptop, as long as we
 # don't get https://github.com/ietf-tools/bibxml-service/issues/489 fixed:
-#  IANA.enterprise-numbers:
-#    -: iana-pen
-#    target: http://www.iana.org/assignments/enterprise-numbers
-#    title: Enterprise Numbers
-#    author:
-#    - org: IANA
-#    date: false
+  IANA.enterprise-numbers:
+    -: iana-pen
+    target: http://www.iana.org/assignments/enterprise-numbers
+    title: Enterprise Numbers
+    author:
+    - org: IANA
+    date: false
+  IANA.yang-sid: # This one works!
 
 informative:
   RFC1065:
@@ -71,22 +72,25 @@ Concise Binary Object Representation (CBOR)") [^abs1a-] RFC 9595
 [^abs2-]
 
 [^abs2-]: The present specification employs these SID allocation
-        mechanisms to allocate ranges with 100 000 63-bit SIDs each
-        for each of the first 1 000 000 holders of IANA-registered
-        Private Enterprise Numbers (PENs), as well as ranges with 10 000 32-bit SIDs each
-        for each of the first 100 000 holders.
+        mechanisms to allocate ranges with 100 000 SIDs
+        (representation size 64 bits) each
+        for each of the holders of IANA-registered
+        Private Enterprise Numbers (PENs) < 1 000 000, as well as ranges with
+        10 000 SIDs (representation size 32 bits) each
+        for each of the holders of PENs < 100 000.
 
 [^status]
 
 [^status]:\\
-    The present revision –04 is intended to address the feedback from
-    the AD review and the IETF last call.
+    The present revision –05 is intended to address the feedback from
+    the directorate reviews and early IESG feedback, in time for the
+    IESG meeting.
     \\
-    Note that due to a regression in the `bib.ietf.org` service
-    (<https://github.com/ietf-tools/bibxml-service/issues/489>), the
-    reference [IANA.enterprise-numbers] may come out as "\*\*\* BROKEN
-    REFERENCE \*\*\*" in some CI systems; this will certainly be fixed in
-    the course of further processing.
+    It also adds cached information to work around the regression in the `bib.ietf.org` service
+    (<https://github.com/ietf-tools/bibxml-service/issues/489>) that
+    caused the
+    reference [IANA.enterprise-numbers] to come out as "\*\*\* BROKEN
+    REFERENCE \*\*\*" in some CI systems.
 
 --- middle
 
@@ -97,26 +101,26 @@ YANG-CBOR {{-yang-cbor}} [^abs1a-] {{-core-sid}} [^abs1b-]
 [^abs2-]
 
 IANA \[is requested to allocate/has allocated] a mega-range with
-100 billion 63-bit SIDs, for the SID numbers 300 000 000 000 to 399 999 999 999.
+100 billion SIDs (representation size 64 bits), for the SID numbers 300 000 000 000 to 399 999 999 999.
 
 IANA also \[is requested to allocate/has allocated] a mega-range with
-1 billion 32-bit SIDs, for the SID numbers 3 000 000 000 to 3 999 999 999.
+1 billion SIDs (representation size 32 bits), for the SID numbers 3 000 000 000 to 3 999 999 999.
 
 Private Enterprise Numbers (PENs) are registered in
 {{IANA.enterprise-numbers}} in a low-threshold, low-overhead
 registration process.
 At the time of writing (~ 37 years after
-creating this registry), around 65 000 PENs are registered.
+creating this registry), around 65 000 PENs are registered.
 In this document, the registrant for a PEN is referred to as the "PEN holder".
 
 The present specification makes the following SID ranges available to
 certain (current or future) PEN holders for allocation in a scheme defined
 by the holder:
 
-* The holder of a PEN ppp ppp (< 1 000 000) can use the SID numbers
-3pp ppp p00 000 to 3pp ppp p99 999.
-* The holder of a PEN pp ppp (< 100 000) can use the SID numbers
-3 ppp pp0 000 to 3 ppp pp9 999.
+* The holder of a PEN ppp ppp (< 1 000 000) can use the SID numbers
+3pp ppp p00 000 to 3pp ppp p99 999.
+* The holder of a PEN pp ppp (< 100 000) can also use the smaller SID numbers
+3 ppp pp0 000 to 3 ppp pp9 999.
 
 # Example
 
@@ -126,16 +130,16 @@ in RFCs, books, documentation, and the like".
 If this Enterprise Number had an actual PEN holder, the present
 specification would confer control to it over the SID ranges:
 
-* 3**03 247 3**00 000 up to 3**03 247 3**99 999, and
-* 3 **324 73**0 000 up to 3 **324 73**9 999.
+* 3**03 247 3**00 000 up to 3**03 247 3**99 999, and
+* 3 **324 73**0 000 up to 3 **324 73**9 999.
 
 (The plaintext form of this document shows "*" characters around the
 digits conveying the PEN, which are shown in **boldface** in the
 typographic forms.)
 
 As Enterprise Number 32473 is intended to be used in documentation,
-the SIDs in the two SID ranges given here are also available for use in
-documentation.
+the SIDs in the two SID ranges listed here for the documentation PEN
+are consequently also available for use in documentation.
 
 # Discussion
 
@@ -147,13 +151,15 @@ space, it can be obtained in a very low-threshold process.
 Employing this number space is, however, not always the approach to
 recommend to a module author:
 
-* The larger of the two spaces uses 64-bit numbers.
-  The larger representation size of the absolute value of the SID is
+* In the larger of the two spaces, each SID number needs a
+  representation size of 64 bits ("64-bit SIDs").
+  (This larger representation size of the absolute value of the SID is
   of comparatively little consequence due to the delta-encoding used for
-  SIDs in YANG-CBOR.
-* For the first 100 000 PEN holders, there also is a smaller space that
-  uses 32-bit numbers.
-  PEN numbers that have access to this space are likely to run out
+  SIDs in YANG-CBOR.)
+* For the holders of PENs < 100 000, there additionally is a smaller space
+  where each SID number needs a representation size of 32 bits
+  ("32-bit SIDs").
+  PEN numbers that have access to this space (PEN < 100 000) are likely to run out
   before or around 2040; the
   expectation is that by that time there will be enough opportunities
   to request SID ranges within mega-ranges allocated by other registrants that
@@ -194,11 +200,12 @@ PEN.
 [^replace-xxxx]
 
 As per {{Section 6.3 of -core-sid}},
-in the YANG-SID Mega-Ranges registry within the YANG SIDs registry group,
-this document allocates two mega-ranges, one with 1 billion
+in the {{sid-mega-range ("YANG-SID Mega-Ranges")<IANA.yang-sid}}
+registry within the "YANG SIDs" registry group {{IANA.yang-sid}},
+this document allocates two mega-ranges, one with 1 billion
 SIDs ranging from 3 000 000 000 up to 3 999 999 999 (32-bit
 representation size), and
-one with 100 billion
+one with 100 billion
 SIDs ranging from 300 000 000 000 up to 399 999 999 999 (64-bit
 representation size),
 as summarized in {{tab-allocations}}.
@@ -210,25 +217,25 @@ as summarized in {{tab-allocations}}.
 
 IANA is requested to mark the following ranges as reserved for documentation:
 
-* 303 247 300 000 up to 303 247 399 999
-* 3 324 730 000 up to 3 324 739 999
+* 303 247 300 000 up to 303 247 399 999
+* 3 324 730 000 up to 3 324 739 999
 
 An additional contact for the allocation is: IETF CORE Working Group
 (core@ietf.org) or IETF Applications and Real-Time Area
 (art@ietf.org).
 
-The allocation policy inside the mega-range is "private".
+The allocation policy inside the mega-range is "private" (see {{Section 6.3.2 of -core-sid}}).
 The URL is that of the present specification.
 
-The management of the SID block of 100 000 SIDs each, ranging from
-3pp ppp p00 000 to 3pp ppp p99 999, is delegated to the PEN holder
-for PEN ppp ppp (i.e., the PEN holder for ppp ppp controls SID
-3pp ppp p00 000 to 3pp ppp p99 999).
+The management of the SID block of 100 000 SIDs each, ranging from
+3pp ppp p00 000 to 3pp ppp p99 999, is delegated to the PEN holder
+for PEN ppp ppp (i.e., the PEN holder for ppp ppp controls SID
+3pp ppp p00 000 to 3pp ppp p99 999).
 
-Similarly, the management of the SID block of 10 000 SIDs each,
-ranging from 3 ppp pp0 000 to 3 ppp pp9 999, is delegated to the PEN holder
-for PEN pp ppp (i.e., the PEN holder for pp ppp controls SID
-3 ppp pp0 000 to 3 ppp pp9 999).
+Similarly, the management of the SID block of 10 000 SIDs each,
+ranging from 3 ppp pp0 000 to 3 ppp pp9 999, is delegated to the PEN holder
+for PEN pp ppp (i.e., the PEN holder for pp ppp controls SID
+3 ppp pp0 000 to 3 ppp pp9 999).
 
 {{Section 6.3.2 of -core-sid}} requires an organization that requests an
 entry in the "YANG-SID Mega-Ranges" registry to ensure the technical
