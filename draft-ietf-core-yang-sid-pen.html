@@ -14,19 +14,22 @@ Concise Binary Object Representation (CBOR)") defines
 ("YANG Schema Item iDentifier (YANG SID)") defines ways to allocate these SIDs on
     the basis of IANA registries. 
        The present specification employs these SID allocation
-    mechanisms to allocate ranges with 100 000 63-bit SIDs each
-    for each of the first 1 000 000 holders of IANA-registered
-    Private Enterprise Numbers (PENs), as well as ranges with 10 000 32-bit SIDs each
-    for each of the first 100 000 holders. 
+    mechanisms to allocate ranges with 100 000 SIDs
+    (representation size 64 bits) each
+    for each of the holders of IANA-registered
+    Private Enterprise Numbers (PENs) &lt; 1 000 000, as well as ranges with
+    10 000 SIDs (representation size 32 bits) each
+    for each of the holders of PENs &lt; 100 000. 
        
-The present revision –04 is intended to address the feedback from
-the AD review and the IETF last call.
+The present revision –05 is intended to address the feedback from
+the directorate reviews and early IESG feedback, in time for the
+IESG meeting.
  
-Note that due to a regression in the  bib.ietf.org  service
-( https://github.com/ietf-tools/bibxml-service/issues/489 ), the
-reference   may come out as "*** BROKEN
-REFERENCE ***" in some CI systems; this will certainly be fixed in
-the course of further processing. 
+It also adds cached information to work around the regression in the  bib.ietf.org  service
+( https://github.com/ietf-tools/bibxml-service/issues/489 ) that
+caused the
+reference   to come out as "*** BROKEN
+REFERENCE ***" in some CI systems. 
     ' name="description">
 <meta content="xml2rfc 3.31.0" name="generator">
 <meta content="YANG-CBOR" name="keyword">
@@ -38,10 +41,10 @@ the course of further processing.
     google-i18n-address 3.1.1
     intervaltree 3.1.0
     Jinja2 3.1.6
-    lxml 5.3.1
-    platformdirs 4.5.0
+    lxml 6.0.2
+    platformdirs 4.5.1
     pycountry 24.6.1
-    PyYAML 6.0.2
+    PyYAML 6.0.3
     requests 2.32.5
     wcwidth 0.2.14
 -->
@@ -1066,7 +1069,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Bormann</td>
-<td class="center">Expires 20 June 2026</td>
+<td class="center">Expires 21 June 2026</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1079,12 +1082,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-ietf-core-yang-sid-pen-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-12-17" class="published">17 December 2025</time>
+<time datetime="2025-12-18" class="published">18 December 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2026-06-20">20 June 2026</time></dd>
+<dd class="expires"><time datetime="2026-06-21">21 June 2026</time></dd>
 <dt class="label-authors">Author:</dt>
 <dd class="authors">
 <div class="author">
@@ -1104,19 +1107,22 @@ Concise Binary Object Representation (CBOR)") defines
 ("YANG Schema Item iDentifier (YANG SID)") defines ways to allocate these SIDs on
     the basis of IANA registries.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 <p id="section-abstract-2">The present specification employs these SID allocation
-    mechanisms to allocate ranges with 100 000 63-bit SIDs each
-    for each of the first 1 000 000 holders of IANA-registered
-    Private Enterprise Numbers (PENs), as well as ranges with 10 000 32-bit SIDs each
-    for each of the first 100 000 holders.<a href="#section-abstract-2" class="pilcrow">¶</a></p>
+    mechanisms to allocate ranges with 100 000 SIDs
+    (representation size 64 bits) each
+    for each of the holders of IANA-registered
+    Private Enterprise Numbers (PENs) &lt; 1 000 000, as well as ranges with
+    10 000 SIDs (representation size 32 bits) each
+    for each of the holders of PENs &lt; 100 000.<a href="#section-abstract-2" class="pilcrow">¶</a></p>
 <p id="section-abstract-3"><span class="cref" id="status"><br>
-The present revision –04 is intended to address the feedback from
-the AD review and the IETF last call.
+The present revision –05 is intended to address the feedback from
+the directorate reviews and early IESG feedback, in time for the
+IESG meeting.
 <br>
-Note that due to a regression in the <code>bib.ietf.org</code> service
-(<a href="https://github.com/ietf-tools/bibxml-service/issues/489">https://github.com/ietf-tools/bibxml-service/issues/489</a>), the
-reference <span>[<a href="#IANA.enterprise-numbers" class="cite xref">IANA.enterprise-numbers</a>]</span> may come out as "*** BROKEN
-REFERENCE ***" in some CI systems; this will certainly be fixed in
-the course of further processing.</span><a href="#section-abstract-3" class="pilcrow">¶</a></p>
+It also adds cached information to work around the regression in the <code>bib.ietf.org</code> service
+(<a href="https://github.com/ietf-tools/bibxml-service/issues/489">https://github.com/ietf-tools/bibxml-service/issues/489</a>) that
+caused the
+reference <span>[<a href="#IANA.enterprise-numbers" class="cite xref">IANA.enterprise-numbers</a>]</span> to come out as "*** BROKEN
+REFERENCE ***" in some CI systems.</span><a href="#section-abstract-3" class="pilcrow">¶</a></p>
 </section>
 <section class="note rfcEditorRemove" id="section-note.1">
       <h2 id="name-about-this-document">
@@ -1152,7 +1158,7 @@ the course of further processing.</span><a href="#section-abstract-3" class="pil
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 20 June 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 21 June 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1227,31 +1233,33 @@ the course of further processing.</span><a href="#section-abstract-3" class="pil
     unsigned integers used to identify YANG items. <span>[<a href="#RFC9595" class="cite xref">RFC9595</a>]</span> defines ways to allocate these SIDs on
     the basis of IANA registries.<a href="#section-1-1" class="pilcrow">¶</a></p>
 <p id="section-1-2">The present specification employs these SID allocation
-    mechanisms to allocate ranges with 100 000 63-bit SIDs each
-    for each of the first 1 000 000 holders of IANA-registered
-    Private Enterprise Numbers (PENs), as well as ranges with 10 000 32-bit SIDs each
-    for each of the first 100 000 holders.<a href="#section-1-2" class="pilcrow">¶</a></p>
+    mechanisms to allocate ranges with 100 000 SIDs
+    (representation size 64 bits) each
+    for each of the holders of IANA-registered
+    Private Enterprise Numbers (PENs) &lt; 1 000 000, as well as ranges with
+    10 000 SIDs (representation size 32 bits) each
+    for each of the holders of PENs &lt; 100 000.<a href="#section-1-2" class="pilcrow">¶</a></p>
 <p id="section-1-3">IANA [is requested to allocate/has allocated] a mega-range with
-100 billion 63-bit SIDs, for the SID numbers 300 000 000 000 to 399 999 999 999.<a href="#section-1-3" class="pilcrow">¶</a></p>
+100 billion SIDs (representation size 64 bits), for the SID numbers 300 000 000 000 to 399 999 999 999.<a href="#section-1-3" class="pilcrow">¶</a></p>
 <p id="section-1-4">IANA also [is requested to allocate/has allocated] a mega-range with
-1 billion 32-bit SIDs, for the SID numbers 3 000 000 000 to 3 999 999 999.<a href="#section-1-4" class="pilcrow">¶</a></p>
+1 billion SIDs (representation size 32 bits), for the SID numbers 3 000 000 000 to 3 999 999 999.<a href="#section-1-4" class="pilcrow">¶</a></p>
 <p id="section-1-5">Private Enterprise Numbers (PENs) are registered in
 <span>[<a href="#IANA.enterprise-numbers" class="cite xref">IANA.enterprise-numbers</a>]</span> in a low-threshold, low-overhead
 registration process.
 At the time of writing (~ 37 years after
-creating this registry), around 65 000 PENs are registered.
+creating this registry), around 65 000 PENs are registered.
 In this document, the registrant for a PEN is referred to as the "PEN holder".<a href="#section-1-5" class="pilcrow">¶</a></p>
 <p id="section-1-6">The present specification makes the following SID ranges available to
 certain (current or future) PEN holders for allocation in a scheme defined
 by the holder:<a href="#section-1-6" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-1-7.1">
-          <p id="section-1-7.1.1">The holder of a PEN ppp ppp (&lt; 1 000 000) can use the SID numbers
-3pp ppp p00 000 to 3pp ppp p99 999.<a href="#section-1-7.1.1" class="pilcrow">¶</a></p>
+          <p id="section-1-7.1.1">The holder of a PEN ppp ppp (&lt; 1 000 000) can use the SID numbers
+3pp ppp p00 000 to 3pp ppp p99 999.<a href="#section-1-7.1.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-1-7.2">
-          <p id="section-1-7.2.1">The holder of a PEN pp ppp (&lt; 100 000) can use the SID numbers
-3 ppp pp0 000 to 3 ppp pp9 999.<a href="#section-1-7.2.1" class="pilcrow">¶</a></p>
+          <p id="section-1-7.2.1">The holder of a PEN pp ppp (&lt; 100 000) can also use the smaller SID numbers
+3 ppp pp0 000 to 3 ppp pp9 999.<a href="#section-1-7.2.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
 </section>
@@ -1267,18 +1275,18 @@ in RFCs, books, documentation, and the like".<a href="#section-2-1" class="pilcr
 specification would confer control to it over the SID ranges:<a href="#section-2-2" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-2-3.1">
-          <p id="section-2-3.1.1">3<strong>03 247 3</strong>00 000 up to 3<strong>03 247 3</strong>99 999, and<a href="#section-2-3.1.1" class="pilcrow">¶</a></p>
+          <p id="section-2-3.1.1">3<strong>03 247 3</strong>00 000 up to 3<strong>03 247 3</strong>99 999, and<a href="#section-2-3.1.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-2-3.2">
-          <p id="section-2-3.2.1">3 <strong>324 73</strong>0 000 up to 3 <strong>324 73</strong>9 999.<a href="#section-2-3.2.1" class="pilcrow">¶</a></p>
+          <p id="section-2-3.2.1">3 <strong>324 73</strong>0 000 up to 3 <strong>324 73</strong>9 999.<a href="#section-2-3.2.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
 <p id="section-2-4">(The plaintext form of this document shows "*" characters around the
 digits conveying the PEN, which are shown in <strong>boldface</strong> in the
 typographic forms.)<a href="#section-2-4" class="pilcrow">¶</a></p>
 <p id="section-2-5">As Enterprise Number 32473 is intended to be used in documentation,
-the SIDs in the two SID ranges given here are also available for use in
-documentation.<a href="#section-2-5" class="pilcrow">¶</a></p>
+the SIDs in the two SID ranges listed here for the documentation PEN
+are consequently also available for use in documentation.<a href="#section-2-5" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="discussion">
@@ -1295,15 +1303,17 @@ Employing this number space is, however, not always the approach to
 recommend to a module author:<a href="#section-3-1" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-3-2.1">
-          <p id="section-3-2.1.1">The larger of the two spaces uses 64-bit numbers.
-The larger representation size of the absolute value of the SID is
+          <p id="section-3-2.1.1">In the larger of the two spaces, each SID number needs a
+representation size of 64 bits ("64-bit SIDs").
+(This larger representation size of the absolute value of the SID is
 of comparatively little consequence due to the delta-encoding used for
-SIDs in YANG-CBOR.<a href="#section-3-2.1.1" class="pilcrow">¶</a></p>
+SIDs in YANG-CBOR.)<a href="#section-3-2.1.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-3-2.2">
-          <p id="section-3-2.2.1">For the first 100 000 PEN holders, there also is a smaller space that
-uses 32-bit numbers.
-PEN numbers that have access to this space are likely to run out
+          <p id="section-3-2.2.1">For the holders of PENs &lt; 100 000, there additionally is a smaller space
+where each SID number needs a representation size of 32 bits
+("32-bit SIDs").
+PEN numbers that have access to this space (PEN &lt; 100 000) are likely to run out
 before or around 2040; the
 expectation is that by that time there will be enough opportunities
 to request SID ranges within mega-ranges allocated by other registrants that
@@ -1351,11 +1361,12 @@ PEN.<a href="#section-3-3" class="pilcrow">¶</a></p>
 RFC-XXXX with the RFC number of this specification and remove this
 note.</span><a href="#section-4-1" class="pilcrow">¶</a></p>
 <p id="section-4-2">As per <span><a href="https://rfc-editor.org/rfc/rfc9595#section-6.3" class="relref">Section 6.3</a> of [<a href="#RFC9595" class="cite xref">RFC9595</a>]</span>,
-in the YANG-SID Mega-Ranges registry within the YANG SIDs registry group,
-this document allocates two mega-ranges, one with 1 billion
+in the <a href="https://www.iana.org/assignments/yang-sid#sid-mega-range" class="relref">"YANG-SID Mega-Ranges"</a>
+registry within the "YANG SIDs" registry group <span>[<a href="#IANA.yang-sid" class="cite xref">IANA.yang-sid</a>]</span>,
+this document allocates two mega-ranges, one with 1 billion
 SIDs ranging from 3 000 000 000 up to 3 999 999 999 (32-bit
 representation size), and
-one with 100 billion
+one with 100 billion
 SIDs ranging from 300 000 000 000 up to 399 999 999 999 (64-bit
 representation size),
 as summarized in <a href="#tab-allocations" class="auto internal xref">Table 1</a>.<a href="#section-4-2" class="pilcrow">¶</a></p>
@@ -1395,25 +1406,25 @@ as summarized in <a href="#tab-allocations" class="auto internal xref">Table 1</
 <p id="section-4-4">IANA is requested to mark the following ranges as reserved for documentation:<a href="#section-4-4" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-4-5.1">
-          <p id="section-4-5.1.1">303 247 300 000 up to 303 247 399 999<a href="#section-4-5.1.1" class="pilcrow">¶</a></p>
+          <p id="section-4-5.1.1">303 247 300 000 up to 303 247 399 999<a href="#section-4-5.1.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-4-5.2">
-          <p id="section-4-5.2.1">3 324 730 000 up to 3 324 739 999<a href="#section-4-5.2.1" class="pilcrow">¶</a></p>
+          <p id="section-4-5.2.1">3 324 730 000 up to 3 324 739 999<a href="#section-4-5.2.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
 <p id="section-4-6">An additional contact for the allocation is: IETF CORE Working Group
 (core@ietf.org) or IETF Applications and Real-Time Area
 (art@ietf.org).<a href="#section-4-6" class="pilcrow">¶</a></p>
-<p id="section-4-7">The allocation policy inside the mega-range is "private".
+<p id="section-4-7">The allocation policy inside the mega-range is "private" (see <span><a href="https://rfc-editor.org/rfc/rfc9595#section-6.3.2" class="relref">Section 6.3.2</a> of [<a href="#RFC9595" class="cite xref">RFC9595</a>]</span>).
 The URL is that of the present specification.<a href="#section-4-7" class="pilcrow">¶</a></p>
-<p id="section-4-8">The management of the SID block of 100 000 SIDs each, ranging from
-3pp ppp p00 000 to 3pp ppp p99 999, is delegated to the PEN holder
-for PEN ppp ppp (i.e., the PEN holder for ppp ppp controls SID
-3pp ppp p00 000 to 3pp ppp p99 999).<a href="#section-4-8" class="pilcrow">¶</a></p>
-<p id="section-4-9">Similarly, the management of the SID block of 10 000 SIDs each,
-ranging from 3 ppp pp0 000 to 3 ppp pp9 999, is delegated to the PEN holder
-for PEN pp ppp (i.e., the PEN holder for pp ppp controls SID
-3 ppp pp0 000 to 3 ppp pp9 999).<a href="#section-4-9" class="pilcrow">¶</a></p>
+<p id="section-4-8">The management of the SID block of 100 000 SIDs each, ranging from
+3pp ppp p00 000 to 3pp ppp p99 999, is delegated to the PEN holder
+for PEN ppp ppp (i.e., the PEN holder for ppp ppp controls SID
+3pp ppp p00 000 to 3pp ppp p99 999).<a href="#section-4-8" class="pilcrow">¶</a></p>
+<p id="section-4-9">Similarly, the management of the SID block of 10 000 SIDs each,
+ranging from 3 ppp pp0 000 to 3 ppp pp9 999, is delegated to the PEN holder
+for PEN pp ppp (i.e., the PEN holder for pp ppp controls SID
+3 ppp pp0 000 to 3 ppp pp9 999).<a href="#section-4-9" class="pilcrow">¶</a></p>
 <p id="section-4-10"><span><a href="https://rfc-editor.org/rfc/rfc9595#section-6.3.2" class="relref">Section 6.3.2</a> of [<a href="#RFC9595" class="cite xref">RFC9595</a>]</span> requires an organization that requests an
 entry in the "YANG-SID Mega-Ranges" registry to ensure the technical
 capacity to manage the SID ranges within those mega-ranges for a
@@ -1454,7 +1465,11 @@ information, as discussed in the above security considerations, remains.<a href=
 <dl class="references">
 <dt id="IANA.enterprise-numbers">[IANA.enterprise-numbers]</dt>
         <dd>
-<span class="refTitle">"*** BROKEN REFERENCE ***"</span>. </dd>
+<span class="refAuthor">IANA</span>, <span class="refTitle">"Enterprise Numbers"</span>, <span>&lt;<a href="http://www.iana.org/assignments/enterprise-numbers">http://www.iana.org/assignments/enterprise-numbers</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="IANA.yang-sid">[IANA.yang-sid]</dt>
+        <dd>
+<span class="refAuthor">IANA</span>, <span class="refTitle">"YANG SIDs"</span>, <span>&lt;<a href="https://www.iana.org/assignments/yang-sid">https://www.iana.org/assignments/yang-sid</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC9254">[RFC9254]</dt>
         <dd>
