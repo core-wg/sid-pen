@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-12-16T01:20:00.619918+00:00",
+  "timestamp": "2025-12-18T01:15:49.001426+00:00",
   "repo": "core-wg/sid-pen",
   "labels": [
     {
@@ -287,25 +287,35 @@
       "id": "PR_kwDOGPqYRM64bTWB",
       "title": "IESG ballot comments Mohamed Boucadair",
       "url": "https://github.com/core-wg/sid-pen/pull/6",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "cabo",
       "authorAssociation": "MEMBER",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2025-12-11T19:38:33Z",
-      "updatedAt": "2025-12-12T06:43:48Z",
+      "updatedAt": "2025-12-17T19:11:06Z",
       "baseRepository": "core-wg/sid-pen",
       "baseRefName": "main",
       "baseRefOid": "39335897baf5e2c988ee21b169aebc7b41b47ea7",
       "headRepository": "core-wg/sid-pen",
       "headRefName": "iesg-mb",
-      "headRefOid": "923492e3678b2f94fdc71154f3050d55d4d0bd8d",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
-      "comments": [],
+      "headRefOid": "f2163e3fef105989a27019876e403f1626432650",
+      "closedAt": "2025-12-17T19:11:06Z",
+      "mergedAt": "2025-12-17T19:11:06Z",
+      "mergedBy": "cabo",
+      "mergeCommit": {
+        "oid": "78ba1c81d64e5acb7bbe239a33685c8c7cf50625"
+      },
+      "comments": [
+        {
+          "author": "cabo",
+          "authorAssociation": "MEMBER",
+          "body": "The comment about the documentation registration now is also in \u00c9ric's DISCUSS.\r\nNext: Generating new I-D revision with that (and some more nits) fixed.",
+          "createdAt": "2025-12-17T16:43:20Z",
+          "updatedAt": "2025-12-17T16:43:20Z"
+        }
+      ],
       "reviews": [
         {
           "id": "PRR_kwDOGPqYRM7U0bQS",
@@ -313,7 +323,7 @@
             "abbreviatedOid": "923492e"
           },
           "author": "boucadair",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "APPROVED",
           "body": "Thank you.",
           "createdAt": "2025-12-12T06:36:19Z",
@@ -334,26 +344,68 @@
       "id": "PR_kwDOGPqYRM64gZ5R",
       "title": "IANA action for documentation range",
       "url": "https://github.com/core-wg/sid-pen/pull/7",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "boucadair",
-      "authorAssociation": "NONE",
+      "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2025-12-12T07:02:17Z",
-      "updatedAt": "2025-12-12T07:02:18Z",
+      "updatedAt": "2025-12-17T06:06:45Z",
       "baseRepository": "core-wg/sid-pen",
       "baseRefName": "iesg-mb",
       "baseRefOid": "923492e3678b2f94fdc71154f3050d55d4d0bd8d",
       "headRepository": "boucadair/sid-pen",
       "headRefName": "patch-1",
       "headRefOid": "72831ba660eb3e7b3500a2f3c67e66ec93b9a941",
+      "closedAt": "2025-12-17T06:06:45Z",
+      "mergedAt": "2025-12-17T06:06:45Z",
+      "mergedBy": "cabo",
+      "mergeCommit": {
+        "oid": "f2163e3fef105989a27019876e403f1626432650"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 8,
+      "id": "PR_kwDOGPqYRM65cuo7",
+      "title": "Address Ines's IoTDIR review and \u00c9ric's DISCUSSes/COMMENTs.",
+      "url": "https://github.com/core-wg/sid-pen/pull/8",
+      "state": "OPEN",
+      "author": "cabo",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-12-17T20:33:03Z",
+      "updatedAt": "2025-12-17T22:00:33Z",
+      "baseRepository": "core-wg/sid-pen",
+      "baseRefName": "main",
+      "baseRefOid": "78ba1c81d64e5acb7bbe239a33685c8c7cf50625",
+      "headRepository": "core-wg/sid-pen",
+      "headRefName": "iesg-ev-iotdir",
+      "headRefOid": "55562f887efbedf86c83ec746d4a61c1d845eee8",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOGPqYRM7V-PtU",
+          "commit": {
+            "abbreviatedOid": "55562f8"
+          },
+          "author": "marco-tiloca-sics",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-12-17T22:00:33Z",
+          "updatedAt": "2025-12-17T22:00:33Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
