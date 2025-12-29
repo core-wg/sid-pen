@@ -8,7 +8,7 @@ abbrev: SID ranges for PEN holders
 area: Applications and Real-Time Area (art)
 wg: CoRE Working Group
 kw: YANG-CBOR
-cat: info
+cat: std
 stream: IETF
 # consensus: true
 pi:
@@ -82,15 +82,9 @@ Concise Binary Object Representation (CBOR)") [^abs1a-] RFC 9595
 [^status]
 
 [^status]:\\
-    The present revision –05 is intended to address the feedback from
-    the directorate reviews and early IESG feedback, in time for the
-    IESG meeting.
-    \\
-    It also adds cached information to work around the regression in the `bib.ietf.org` service
-    (<https://github.com/ietf-tools/bibxml-service/issues/489>) that
-    caused the
-    reference [IANA.enterprise-numbers] to come out as "\*\*\* BROKEN
-    REFERENCE \*\*\*" in some CI systems.
+    The present revision –06 is a resubmission of -05 with
+    "Intended Status: Standards Track", after IESG discussion pointed
+    into this direction.
 
 --- middle
 
