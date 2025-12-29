@@ -4,8 +4,8 @@
 
 CoRE Working Group                                            C. Bormann
 Internet-Draft                                    Universität Bremen TZI
-Intended status: Informational                          18 December 2025
-Expires: 21 June 2026
+Intended status: Standards Track                        29 December 2025
+Expires: 2 July 2026
 
 
             YANG-CBOR: Allocating SID ranges for PEN holders
@@ -28,14 +28,9 @@ Abstract
    100 000.
 
 
-   // The present revision –05 is intended to address the feedback from
-   // the directorate reviews and early IESG feedback, in time for the
-   // IESG meeting.  It also adds cached information to work around the
-   // regression in the bib.ietf.org service (https://github.com/ietf-
-   // tools/bibxml- service/issues/489 (https://github.com/ietf-tools/
-   // bibxml-service/ issues/489)) that caused the reference
-   // [IANA.enterprise-numbers] to come out as "*** BROKEN REFERENCE
-   // ***" in some CI systems.
+   // The present revision –06 is a resubmission of -05 with "Intended
+   // Status: Standards Track", after IESG discussion pointed into this
+   // direction.
 
 About This Document
 
@@ -49,17 +44,19 @@ About This Document
    https://mailarchive.ietf.org/arch/browse/core/.  Subscribe at
    https://www.ietf.org/mailman/listinfo/core/.
 
+   Source for this draft and an issue tracker can be found at
+   https://github.com/core-wg/sid-pen.
 
 
 
 
-Bormann                   Expires 21 June 2026                  [Page 1]
+
+
+
+Bormann                    Expires 2 July 2026                  [Page 1]
 
 Internet-Draft         SID ranges for PEN holders          December 2025
 
-
-   Source for this draft and an issue tracker can be found at
-   https://github.com/core-wg/sid-pen.
 
 Status of This Memo
 
@@ -76,7 +73,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 21 June 2026.
+   This Internet-Draft will expire on 2 July 2026.
 
 Copyright Notice
 
@@ -109,7 +106,10 @@ Table of Contents
 
 
 
-Bormann                   Expires 21 June 2026                  [Page 2]
+
+
+
+Bormann                    Expires 2 July 2026                  [Page 2]
 
 Internet-Draft         SID ranges for PEN holders          December 2025
 
@@ -165,7 +165,7 @@ Internet-Draft         SID ranges for PEN holders          December 2025
 
 
 
-Bormann                   Expires 21 June 2026                  [Page 3]
+Bormann                    Expires 2 July 2026                  [Page 3]
 
 Internet-Draft         SID ranges for PEN holders          December 2025
 
@@ -221,7 +221,7 @@ Internet-Draft         SID ranges for PEN holders          December 2025
 
 
 
-Bormann                   Expires 21 June 2026                  [Page 4]
+Bormann                    Expires 2 July 2026                  [Page 4]
 
 Internet-Draft         SID ranges for PEN holders          December 2025
 
@@ -277,7 +277,7 @@ Internet-Draft         SID ranges for PEN holders          December 2025
 
 
 
-Bormann                   Expires 21 June 2026                  [Page 5]
+Bormann                    Expires 2 July 2026                  [Page 5]
 
 Internet-Draft         SID ranges for PEN holders          December 2025
 
@@ -333,7 +333,7 @@ Internet-Draft         SID ranges for PEN holders          December 2025
 
 
 
-Bormann                   Expires 21 June 2026                  [Page 6]
+Bormann                    Expires 2 July 2026                  [Page 6]
 
 Internet-Draft         SID ranges for PEN holders          December 2025
 
@@ -389,7 +389,7 @@ Internet-Draft         SID ranges for PEN holders          December 2025
 
 
 
-Bormann                   Expires 21 June 2026                  [Page 7]
+Bormann                    Expires 2 July 2026                  [Page 7]
 
 Internet-Draft         SID ranges for PEN holders          December 2025
 
@@ -445,4 +445,4 @@ Author's Address
 
 
 
-Bormann                   Expires 21 June 2026                  [Page 8]
+Bormann                    Expires 2 July 2026                  [Page 8]
